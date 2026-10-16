@@ -1,0 +1,39 @@
+---
+import {
+  copyrightLine,
+  cuiShort,
+  primaryNav,
+  productName,
+} from "../content/copy";
+---
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/">
+        <img
+          src="/brand/santan-ai-logo-white.svg"
+          alt="Santan"
+          width="208"
+          height="36"
+        />
+      </a>
+      <p class="footer-product">{productName}</p>
+    </div>
+    <p class="footer-cui">
+      <a href="/security">{cuiShort}</a>
+    </p>
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        {
+          primaryNav.map((item) => (
+            <li>
+              <a href={item.href}>{item.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <p class="copyright">{copyrightLine}</p>
+  </div>
+</footer>

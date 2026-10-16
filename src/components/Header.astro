@@ -1,0 +1,63 @@
+---
+import { primaryNav, productName } from "../content/copy";
+
+const pathname = Astro.url.pathname;
+
+function isCurrent(href: string): boolean {
+  const target = href.replace(/\/$/, "") || "/";
+  const current = pathname.replace(/\/$/, "") || "/";
+  if (target === "/contact") {
+    return current === "/contact" || current.startsWith("/contact/");
+  }
+  return current === target;
+}
+---
+
+<header class="site-header">
+  <a class="lockup" href="/">
+    <img
+      src="/brand/santan-ai-logo-navy.svg"
+      alt="Santan"
+      width="208"
+      height="36"
+    />
+    <span class="product-name">{productName}</span>
+  </a>
+  <nav class="nav-desktop" aria-label="Primary">
+    <ul class="nav-list">
+      {
+        primaryNav.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              aria-current={isCurrent(item.href) ? "page" : undefined}
+              class={item.href === "/contact" ? "nav-contact" : undefined}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+  <details class="nav-disclosure">
+    <summary>Menu</summary>
+    <nav aria-label="Primary">
+      <ul class="nav-list">
+        {
+          primaryNav.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                aria-current={isCurrent(item.href) ? "page" : undefined}
+                class={item.href === "/contact" ? "nav-contact" : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </details>
+</header>

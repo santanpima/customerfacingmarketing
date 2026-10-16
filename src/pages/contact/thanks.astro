@@ -1,0 +1,11 @@
+---
+import CuiNotice from "../../components/CuiNotice.astro";
+import { seo, thanksBody } from "../../content/copy";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title={seo.thanks.title} description={seo.thanks.description} noindex>
+  <h1>Request received</h1>
+  <p>{thanksBody}</p>
+  <CuiNotice />
+</BaseLayout>

@@ -1,0 +1,91 @@
+---
+import CtaRow from "../components/CtaRow.astro";
+import CuiNotice from "../components/CuiNotice.astro";
+import {
+  assistantSummary,
+  credentialsAndAudit,
+  dataIsolation,
+  includedWithLightScheduler,
+  productBuild,
+  securityLede,
+  securityNotYet,
+  seo,
+  signInFact,
+} from "../content/copy";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const assistantIncluded = includedWithLightScheduler.find(
+  (item) => item.name === "The Assistant",
+);
+
+const attachmentSentence = assistantIncluded?.summary
+  .split(/(?<=\.)\s+/)
+  .find((sentence) => sentence.startsWith("A file attached"));
+
+if (!assistantIncluded?.summary.includes("every AI call is recorded")) {
+  throw new Error("Assistant copy is missing the recorded-call clause.");
+}
+
+if (!attachmentSentence) {
+  throw new Error("Assistant copy is missing the attachment sentence.");
+}
+---
+
+<BaseLayout title={seo.security.title} description={seo.security.description}>
+  <h1>Security</h1>
+  <CuiNotice />
+
+  <section>
+    <h2>What this service is not</h2>
+    <p>
+      This service is not FedRAMP authorized, not FedRAMP Moderate equivalent,
+      and not for Controlled Unclassified Information or covered defense
+      information.
+    </p>
+    <p>{securityLede}</p>
+  </section>
+
+  <section>
+    <h2>How customer data is kept apart</h2>
+    <p>{dataIsolation}</p>
+  </section>
+
+  <section>
+    <h2>Credentials and audit</h2>
+    <p>{credentialsAndAudit}</p>
+  </section>
+
+  <section>
+    <h2>Product build</h2>
+    <p>{productBuild}</p>
+    <p>
+      This is a fact about the product. It does not describe this marketing
+      site.
+    </p>
+  </section>
+
+  <section>
+    <h2>Sign-in</h2>
+    <p>{signInFact}</p>
+    <p>This does not transfer any Google authorization onto Pima.</p>
+    <p>
+      Sign-in happens in the product, not on this site. This marketing site has
+      no sign-in because the product has no live URL.
+    </p>
+  </section>
+
+  <section>
+    <h2>The Assistant</h2>
+    <p>{assistantSummary}</p>
+    <p>Every AI call is recorded.</p>
+    <p>{attachmentSentence}</p>
+  </section>
+
+  <section>
+    <h2>Not yet</h2>
+    <p>{securityNotYet}</p>
+    <p><a href="/contact">Contact</a></p>
+  </section>
+
+  <CtaRow />
+</BaseLayout>

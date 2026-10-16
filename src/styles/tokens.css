@@ -1,0 +1,12 @@
+:root {
+  --color-dark-blue: #0e2841;
+  --color-white-smoke: #f5f5f5;
+  --color-white: #ffffff;
+  --font-sans: "Segoe UI", system-ui, sans-serif;
+  --measure: 40rem;
+  --page-width: 72rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3.5rem;
+}

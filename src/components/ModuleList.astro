@@ -1,0 +1,42 @@
+---
+import {
+  laterModules,
+  laterModulesFollow,
+  laterReleaseStatus,
+  notOnFirstReleaseLabel,
+  type LaterModule,
+} from "../content/copy";
+
+interface Props {
+  modules?: readonly LaterModule[];
+}
+
+const { modules = laterModules } = Astro.props;
+
+for (const entry of modules) {
+  const record = entry as LaterModule & {
+    available?: unknown;
+    status: string;
+  };
+  if (record.available === true || record.status !== laterReleaseStatus) {
+    throw new Error(
+      `${entry.name} is not on the first release and cannot be marked available.`,
+    );
+  }
+}
+---
+
+<section aria-labelledby="later-modules-heading">
+  <h2 id="later-modules-heading">{laterModulesFollow}</h2>
+  <ul class="module-list">
+    {
+      modules.map((entry) => (
+        <li>
+          <h3>{entry.name}</h3>
+          <p>{entry.summary}</p>
+          <p class="module-status">{notOnFirstReleaseLabel}</p>
+        </li>
+      ))
+    }
+  </ul>
+</section>

@@ -1,0 +1,101 @@
+---
+import CtaRow from "../components/CtaRow.astro";
+import {
+  buyingLede,
+  enterpriseModulesNote,
+  functionsNote,
+  laterModulesFollow,
+  lightScheduler,
+  paymentIntent,
+  seo,
+  trialNote,
+} from "../content/copy";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title={seo.buying.title} description={seo.buying.description}>
+  <h1>How buying works</h1>
+  <p>{buyingLede}</p>
+  <p>First accounts are created by hand.</p>
+  <CtaRow />
+
+  <section>
+    <h2>What you buy</h2>
+    <p>
+      Project Modules, by the named seat. A customer buys a quantity of seats in
+      a module. An administrator assigns each seat to one person. A seat is the
+      licence to reach that module, reading included. Losing the seat removes
+      the module, reading included.
+    </p>
+  </section>
+
+  <section>
+    <h2>What is for sale now</h2>
+    <p>
+      Only {lightScheduler.name} seats are for sale now. {lightScheduler.summary}{" "}
+      {laterModulesFollow}{" "}See the <a href="/product">product page</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>What you do not buy</h2>
+    <p>{enterpriseModulesNote}</p>
+    <p>{functionsNote}</p>
+  </section>
+
+  <section>
+    <h2>How Santan intends to charge</h2>
+    <p>{paymentIntent}</p>
+  </section>
+
+  <section>
+    <h2>Account shape</h2>
+    <p>Chosen at sale, separately from modules.</p>
+    <ul>
+      <li>
+        Shared tenancy with row-level security. The Beta is joint tenancy,
+        multiple logins, one Santan account.
+      </li>
+      <li>Dedicated database if a customer needs it.</li>
+      <li>
+        A FedRAMP deployment inside an Assured Workloads boundary is designed,
+        not authorized, not this service, not for sale now.
+      </li>
+      <li>
+        Customer-operated on the customer’s infrastructure is not the first
+        release.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Trial</h2>
+    <p>{trialNote}</p>
+  </section>
+
+  <section>
+    <h2>AI</h2>
+    <p>
+      Both credit and bring-your-own-key will stand; credits first when they
+      exist. Quantities are unset. Credits are not built. The Beta uses the
+      customer’s own key. If the customer uses their own key, their contract
+      with that vendor governs.
+    </p>
+    <p>
+      AI is the only thing ever metered. A hard stop can only stop the
+      Assistant, never the schedule.
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  ul {
+    max-width: var(--measure);
+    margin: 0 0 var(--space-md);
+    padding-left: var(--space-md);
+  }
+
+  li + li {
+    margin-top: var(--space-sm);
+  }
+</style>

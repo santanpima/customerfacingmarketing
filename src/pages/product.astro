@@ -1,0 +1,64 @@
+---
+import CtaRow from "../components/CtaRow.astro";
+import CuiNotice from "../components/CuiNotice.astro";
+import ModuleList from "../components/ModuleList.astro";
+import {
+  enterpriseModules,
+  enterpriseModulesNote,
+  functions,
+  functionsNote,
+  includedWithLightScheduler,
+  lightScheduler,
+  seo,
+} from "../content/copy";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title={seo.product.title} description={seo.product.description}>
+  <h1>{lightScheduler.name}</h1>
+  <p>{lightScheduler.summary}</p>
+  <CuiNotice />
+
+  <section>
+    <h2>Included with Light Scheduler</h2>
+    <p>These are included with Light Scheduler. They are not sold separately.</p>
+    <ul class="module-list">
+      {
+        includedWithLightScheduler.map((item) => (
+          <li>
+            <h3>{item.name}</h3>
+            <p>{item.summary}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <ModuleList />
+
+  <section>
+    <h2>Enterprise Modules and functions</h2>
+    <p>{enterpriseModulesNote}</p>
+    <ul>
+      {enterpriseModules.map((item) => <li>{item.name}</li>)}
+    </ul>
+    <p>{functionsNote}</p>
+    <ul>
+      {functions.map((item) => <li>{item.name}</li>)}
+    </ul>
+  </section>
+
+  <section>
+    <h2>AI metering</h2>
+    <p>
+      Credits are planned and not built. Beta uses the customer’s own key. Quantities
+      are unset.
+    </p>
+    <p>
+      A hard stop can only stop the Assistant, never the schedule. The product works
+      with AI off.
+    </p>
+  </section>
+
+  <CtaRow />
+</BaseLayout>

@@ -1,0 +1,247 @@
+---
+import { contactFormClosed, cuiCheckbox } from "../content/copy";
+
+const intentParam = Astro.url.searchParams.get("intent")?.trim().toLowerCase();
+const intent =
+  intentParam === "demo" || intentParam === "quote" || intentParam === "both"
+    ? intentParam
+    : "demo";
+---
+
+<form class="contact-form" aria-describedby="contact-form-closed">
+  <fieldset disabled>
+    <legend>Demo or quote request</legend>
+    <div class="fields">
+      <div class="field">
+        <label for="contact-name">Name <span class="hint">(required)</span></label>
+        <input id="contact-name" name="name" type="text" autocomplete="name" required />
+      </div>
+
+      <div class="field">
+        <label for="contact-organization">Organization <span class="hint">(required)</span></label>
+        <input
+          id="contact-organization"
+          name="organization"
+          type="text"
+          autocomplete="organization"
+          required
+        />
+      </div>
+
+      <div class="field">
+        <label for="contact-email">Work email <span class="hint">(required)</span></label>
+        <input id="contact-email" name="email" type="email" autocomplete="email" required />
+      </div>
+
+      <fieldset class="intent">
+        <legend>Intent <span class="hint">(required)</span></legend>
+        <div class="choices">
+          <label class="choice" for="intent-demo">
+            <input
+              id="intent-demo"
+              type="radio"
+              name="intent"
+              value="demo"
+              required
+              checked={intent === "demo"}
+            />
+            Demo
+          </label>
+          <label class="choice" for="intent-quote">
+            <input
+              id="intent-quote"
+              type="radio"
+              name="intent"
+              value="quote"
+              checked={intent === "quote"}
+            />
+            Quote
+          </label>
+          <label class="choice" for="intent-both">
+            <input
+              id="intent-both"
+              type="radio"
+              name="intent"
+              value="both"
+              checked={intent === "both"}
+            />
+            Both
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="contact-role">Role <span class="hint">(optional)</span></label>
+        <input id="contact-role" name="role" type="text" autocomplete="organization-title" />
+      </div>
+
+      <div class="field">
+        <label for="contact-seats">
+          Approximate seats for Light Scheduler <span class="hint">(optional)</span>
+        </label>
+        <input
+          id="contact-seats"
+          name="seats"
+          type="number"
+          inputmode="numeric"
+          min="1"
+          step="1"
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="field">
+        <label for="contact-notes">Notes <span class="hint">(optional)</span></label>
+        <textarea id="contact-notes" name="notes" rows="5"></textarea>
+      </div>
+
+      <label class="check" for="contact-cui">
+        <input id="contact-cui" name="cuiAcknowledgement" type="checkbox" value="yes" required />
+        <span>{cuiCheckbox}</span>
+      </label>
+
+      <button type="submit" disabled aria-describedby="contact-form-closed">Send request</button>
+    </div>
+  </fieldset>
+  <p id="contact-form-closed" class="closed-note">{contactFormClosed}</p>
+</form>
+
+<script is:inline>
+  (function () {
+    var raw = new URLSearchParams(window.location.search).get("intent");
+    var intent = raw ? raw.trim().toLowerCase() : "";
+    if (intent !== "demo" && intent !== "quote" && intent !== "both") return;
+    var input = document.getElementById("intent-" + intent);
+    if (input) input.checked = true;
+  })();
+</script>
+
+<style>
+  .contact-form {
+    max-width: var(--measure);
+    margin: 0;
+  }
+
+  .contact-form fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    min-inline-size: 0;
+  }
+
+  .contact-form legend {
+    padding: 0;
+    font-weight: 600;
+  }
+
+  .contact-form > fieldset > legend {
+    margin: 0 0 var(--space-md);
+    font-size: 1.15rem;
+  }
+
+  .fields {
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  .field label,
+  .intent legend {
+    display: block;
+    margin: 0 0 0.35rem;
+    font-weight: 600;
+  }
+
+  .hint {
+    font-weight: 400;
+  }
+
+  .field input,
+  .field textarea,
+  .fields > button {
+    display: block;
+    width: 100%;
+    margin: 0;
+    border: 1px solid var(--color-dark-blue);
+    border-radius: 0;
+    background: var(--color-white);
+    box-shadow: none;
+    color: var(--color-dark-blue);
+    font: inherit;
+    line-height: 1.4;
+  }
+
+  .field input,
+  .fields > button {
+    min-height: 2.75rem;
+    padding: 0.55rem 0.75rem;
+  }
+
+  .field textarea {
+    min-height: 8rem;
+    padding: 0.55rem 0.75rem;
+    resize: vertical;
+  }
+
+  .field input:disabled,
+  .field textarea:disabled,
+  .fields > button:disabled {
+    background: var(--color-white);
+    color: var(--color-dark-blue);
+    opacity: 1;
+    -webkit-text-fill-color: var(--color-dark-blue);
+  }
+
+  .fields > button:disabled {
+    background: var(--color-white-smoke);
+    font-weight: 600;
+    cursor: not-allowed;
+  }
+
+  .choices {
+    display: grid;
+  }
+
+  .choice,
+  .check {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    min-height: 2.75rem;
+  }
+
+  .choice {
+    font-weight: 600;
+  }
+
+  .check {
+    align-items: flex-start;
+    font-weight: 400;
+  }
+
+  .choice input,
+  .check input {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0;
+    flex: none;
+    accent-color: var(--color-dark-blue);
+  }
+
+  .choice input:disabled,
+  .check input:disabled {
+    opacity: 1;
+  }
+
+  .check input {
+    margin-top: 0.35rem;
+  }
+
+  .check span {
+    padding: 0.4rem 0;
+  }
+
+  .closed-note {
+    margin: var(--space-md) 0 0;
+    font-weight: 600;
+  }
+</style>

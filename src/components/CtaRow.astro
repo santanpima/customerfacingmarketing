@@ -1,0 +1,15 @@
+---
+import { ctaDemo, ctaQuote } from "../content/copy";
+
+interface Props {
+  demo?: boolean;
+  quote?: boolean;
+}
+
+const { demo = true, quote = true } = Astro.props;
+---
+
+<div class="cta-row">
+  {demo && <a class="cta" href={ctaDemo.href}>{ctaDemo.label}</a>}
+  {quote && <a class="cta" href={ctaQuote.href}>{ctaQuote.label}</a>}
+</div>

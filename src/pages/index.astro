@@ -1,0 +1,64 @@
+---
+import CtaRow from "../components/CtaRow.astro";
+import ModuleList from "../components/ModuleList.astro";
+import {
+  assistantSummary,
+  buyingLede,
+  homeLede,
+  homepageHeadline,
+  includedWithLightScheduler,
+  lightScheduler,
+  seo,
+  trialNote,
+  whoItIsFor,
+} from "../content/copy";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title={seo.home.title} description={seo.home.description}>
+  <h1>{homepageHeadline}</h1>
+  <p>{homeLede}</p>
+  <CtaRow />
+
+  <section>
+    <h2>What Light Scheduler is</h2>
+    <p>{lightScheduler.summary}</p>
+  </section>
+
+  <section>
+    <h2>What comes with Light Scheduler</h2>
+    <p>These are included with Light Scheduler. They are not sold separately.</p>
+    <ul class="module-list">
+      {
+        includedWithLightScheduler.map((item) => (
+          <li>
+            <h3>{item.name}</h3>
+            <p>{item.summary}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <ModuleList />
+
+  <section>
+    <h2>Who it is for</h2>
+    <p>{whoItIsFor}</p>
+    <p>
+      First conversations are often with people who already buy Primavera, Microsoft
+      Project, or Deltek.
+    </p>
+  </section>
+
+  <section>
+    <h2>Buying</h2>
+    <p>{buyingLede} No self-serve signup. Request a quote or a demo.</p>
+    <p>{trialNote}</p>
+  </section>
+
+  <section>
+    <h2>The Assistant</h2>
+    <p>{assistantSummary}</p>
+  </section>
+</BaseLayout>
