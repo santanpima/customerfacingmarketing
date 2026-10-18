@@ -4,12 +4,33 @@ import { ctaDemo, ctaQuote } from "../content/copy";
 interface Props {
   demo?: boolean;
   quote?: boolean;
+  /** Home and product: filled demo, quote as a text link. Buying: both buttons equal. */
+  emphasis?: "demo" | "equal";
 }
 
-const { demo = true, quote = true } = Astro.props;
+const { demo = true, quote = true, emphasis = "demo" } = Astro.props;
 ---
 
 <div class="cta-row">
-  {demo && <a class="cta" href={ctaDemo.href}>{ctaDemo.label}</a>}
-  {quote && <a class="cta" href={ctaQuote.href}>{ctaQuote.label}</a>}
+  {
+    demo && (
+      <a class:list={["cta", emphasis === "demo" && "cta-primary"]} href={ctaDemo.href}>
+        {ctaDemo.label}
+      </a>
+    )
+  }
+  {
+    quote && emphasis === "equal" && (
+      <a class="cta" href={ctaQuote.href}>
+        {ctaQuote.label}
+      </a>
+    )
+  }
+  {
+    quote && emphasis === "demo" && (
+      <a class="cta-quiet" href={ctaQuote.href}>
+        {ctaQuote.label}
+      </a>
+    )
+  }
 </div>

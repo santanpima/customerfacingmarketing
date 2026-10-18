@@ -1,6 +1,6 @@
 ---
 import CuiNotice from "../../components/CuiNotice.astro";
-import { seo, thanksBody } from "../../content/copy";
+import { seo, thanksBody, thanksNext } from "../../content/copy";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
@@ -8,4 +8,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   <h1>Request received</h1>
   <p>{thanksBody}</p>
   <CuiNotice />
+  <p>{thanksNext}</p>
+  <ul class="text-links">
+    <li><a href="/product">Product</a></li>
+    <li><a href="/security">Security</a></li>
+  </ul>
 </BaseLayout>

@@ -131,7 +131,7 @@ Document 27 still needs a final one sentence. **Q6 (16 October 2026):** use **Op
 
 **Risk:** “The tools you already buy” invites a bake-off. Keep competitors off the homepage headline.
 
-**Current build:** Option A in the hero. To change later, replace the headline string only. Do not pick D as the only sentence. Do not pick F without stripping competitor echo if it reads as C7.
+**Current build:** Option A is split across the homepage title and lede. The title is “Light Scheduler is Pima’s first module.” The lede carries the platform, the named seat, unclassified work, and the short CUI line. Still a placeholder, not a decided slogan. To change later, replace those two strings. Do not pick D as the only sentence. Do not pick F without stripping competitor echo if it reads as C7.
 
 ## Shared copy
 
@@ -141,7 +141,7 @@ Use this text, or a strict shortening that keeps every clause, on **home, produc
 
 > Commercial Pima is not FedRAMP authorized and is not FedRAMP Moderate equivalent. It is not for Controlled Unclassified Information (CUI) or covered defense information. A defense contractor who puts CUI into this service can break their own contract. A path for CUI would be a later, separate deployment. That deployment is not for sale now.
 
-**Short banner** (always accompanied by a link to `/security` for the full statement):
+**Short banner** (always accompanied by a link to `/security` for the full statement). It is part of the chrome and is not dismissible.
 
 > This service is not for CUI and is not FedRAMP authorized.
 
@@ -149,8 +149,8 @@ Use this text, or a strict shortening that keeps every clause, on **home, produc
 
 | CTA | Goes to | Notes |
 | --- | --- | --- |
-| Request a demo | `/contact?intent=demo` | Default primary |
-| Request a quote | `/contact?intent=quote` | Equal weight on `/buying` |
+| Request a demo | `/contact?intent=demo` | Default primary. Filled button on home, product, and security. |
+| Request a quote | `/contact?intent=quote` | Text link beside that button. Equal-weight button on `/buying`. |
 | Sign in | Application URL, when one exists | **Hidden (Q1, 16 October 2026).** Beta has no live URL. Do not guess `app.santan.ai`. Revisit when a production host exists. |
 
 Do not use: Get started, Start free, Try Pima, Create account, Buy, See pricing (as if a price list).
@@ -185,23 +185,22 @@ Headlines below are drafts. Body is the substance that must appear.
 
 **Hero**
 
-- Headline: **Option A** (placeholder; Q6). Not a decided slogan.
-- Lede: Pima is a project-controls platform. You buy Project Modules by named seat. The first module for sale is Light Scheduler.
-- CTAs: Request a demo. Request a quote. No Sign in (Q1).
+- Headline: **Light Scheduler is Pima’s first module.** Option A split into one sentence (placeholder; Q6). Not a decided slogan.
+- Lede: Pima is Santan’s project-controls platform. You buy named seats and plan unclassified work. This service is not for CUI and is not FedRAMP authorized.
+- CTAs: Request a demo is the filled button. Request a quote is a text link. No Sign in (Q1). Repeat the demo button at the end of the page, then one line: Santan will reply. This site does not create an account. No response time.
+- Three routes under the hero, in this order: what ships (`/product`), how a quote works (`/buying`), what this service is not (`/security`).
 
-**CUI.** Canonical notice or short banner + `/security`.
+**CUI.** Short banner, not dismissible, plus the short line in the lede. Link to `/security`.
 
-**What Light Scheduler is.** Plan the work without the formal IMS apparatus: the grid and its outline, dates, durations, the Gantt, dependencies, constraints, and the forward pass.
+**What Light Scheduler is.** One clause that this is planning without the formal apparatus, then the Light Scheduler still, then a scan list of five names only: grid and outline, dates and durations, dependencies and constraints, the Gantt, and the forward pass. Do not repeat a sentence under each name on the home page. Those sentences stay on `/product`.
 
-**What comes with it.** Registry, calendars, admin, security (sign-in, 2FA, roles), import/export/reporting including print and the Graphic, the Assistant. Phrase these as included with Light Scheduler, not as extra SKUs.
+**The Assistant.** Directly after that list. It proposes. You keep or discard. Usable with AI off. Do not attach CUI to a prompt.
 
-**Later.** Master Scheduler, Agile Planner, Risk Management, Project Finance, Proposal Pricer, Earned Value, Portfolio, and Change Management are later releases. They are not for sale on the first release.
+**Who.** Lead: defense contractors and commercial teams, on an ordinary cloud service. Then four lines, in this order: unclassified planning, internal projects, commercial work, proposals before award. The next paragraph stays: first conversations are often with people who already buy Primavera, Microsoft Project, or Deltek.
 
-**Who.** Defense contractors and commercial teams who need unclassified planning, internal projects, commercial work, and proposals before award, on an ordinary cloud service. First conversations are often with people who already buy Primavera, Microsoft Project, or Deltek.
+**What a seat includes.** One sentence: Project Registry, Calendars, Admin Panels, Security so far, Import / Export / Reporting, and the Assistant. None of these is a separate line item. Link to `/product`. Later modules are one sentence and a link to the product page, not the eight-name list.
 
-**Buying, one paragraph.** No published price list. Santan quotes. No self-serve signup. Request a quote or a demo.
-
-**Assistant, one paragraph.** It proposes. You keep or discard. Usable with AI off. Do not attach CUI to a prompt.
+**Buying, one paragraph.** Santan quotes named seats in Light Scheduler. No published price list, no tiers, no self-serve signup. There is no self-serve trial. Ask for a demo.
 
 Do not: logo row, testimonial, pricing table, “trusted by”, competitor matrix.
 
@@ -211,7 +210,15 @@ Do not: logo row, testimonial, pricing table, “trusted by”, competitor matri
 
 **CUI.** Canonical notice.
 
-**Light Scheduler.** Repeat the definition. Be concrete: grid, outline, dates, durations, Gantt, dependencies, constraints, forward pass. Do not describe Master Scheduler features (full WBS, baseline, float, critical path, EVMS-compliant foundation) as if they were Light Scheduler.
+**Light Scheduler.** Repeat the definition. Be concrete: grid, outline, dates, durations, Gantt, dependencies, constraints, forward pass.
+
+**An unclassified plan.** The Light Scheduler still, then the same capabilities as an ordered walkthrough of one plan with no CUI in it. Each step keeps its sentence. State that baseline, float, the critical path, and an EVMS-compliant foundation are Master Scheduler and are not on the first release. Do not describe those features as if they were Light Scheduler.
+
+### Light Scheduler still
+
+One image, used on the home scan list and at the start of “An unclassified plan.” File: `public/light-scheduler-placeholder.svg`. It is a labeled placeholder, not a product screenshot.
+
+Replace that file with a still Santan supplies. The still shows one unclassified plan in Light Scheduler: the grid and its outline, dates, durations, the Gantt, dependencies, and constraints. It does not show baseline, float, the critical path, or an EVMS-compliant foundation. Those are Master Scheduler and are not on the first release. Do not put CUI in the sample plan. Do not draw a fake schedule and present it as the product. Until the still exists, keep the placeholder and its caption.
 
 **Included with it** (not sold separately):
 
@@ -224,7 +231,7 @@ Do not: logo row, testimonial, pricing table, “trusted by”, competitor matri
 
 **Later modules.** A table or list using the definitions in requirements.md. Column or label: **Not on the first release.** One line: later modules follow in later releases.
 
-**Enterprise Modules and functions.** Short note: not sold. They appear because a seated module needs them, or because a seated person needs a function. Do not put them in a buy grid.
+**Not on the quote.** Do not list Project Registry, Calendars, Admin Panels, Security, Import / Export / Reporting, or the Assistant again as unsold; the included section already names them. One note for the names that are not in that set: Resources, Rates, Burdens, Organizations, Assignment, Rollup, and the Pricing Engine. They are not line items and not sold. They appear because a seated module or a seated person needs them. Do not put them in a buy grid.
 
 **AI metering.** Credits are planned and not built. Beta uses the customer’s own key. No quantities. A hard stop cannot stop the schedule.
 
@@ -234,7 +241,7 @@ This page **is** the Gate 1 “pricing” page. It explains the model. It has no
 
 **Title:** How buying works
 
-**Open.** There is no public price list and there are no tiers. Santan sends a quote. Request a quote or a demo. First accounts are created by hand.
+**Open.** Santan quotes named seats in Light Scheduler. This page has no prices. There are no tiers. First accounts are created by hand. Request a quote and a demo at equal weight, under the title and again at the end of the page.
 
 **What you buy.** Project Modules, by the named seat. Quantity of seats in a module; administrator assigns each seat to one person; seat is the licence to reach that module, reading included; losing the seat removes the module, reading included.
 
@@ -257,7 +264,7 @@ This page **is** the Gate 1 “pricing” page. It explains the model. It has no
 
 No dollar figures.
 
-**Trial.** What a trial is has not been decided. There is no self-serve trial. Ask for a demo.
+**Trial.** There is no self-serve trial. Ask for a demo. Do not print that a trial is undecided; that is Q17, not public copy.
 
 **AI commercials.** Both credit and bring-your-own-key will stand; credits first when they exist. Quantities unset. Do not quote a credit price.
 
@@ -267,9 +274,9 @@ No dollar figures.
 
 **Purpose.** Document 54 S1 overview plus the mandatory CUI line. Not a questionnaire pack.
 
-**Lead with CUI.** Canonical notice, full text, not a banner-only treatment.
+**Lead with CUI.** Canonical notice, full text, not a banner-only treatment. The next sentence is the designed FedRAMP shape: designed, and not this service. Do not open the page with a second restatement of the notice.
 
-**This service is not.** Not FedRAMP authorized. Not FedRAMP Moderate equivalent. Not for CUI or covered defense information. Shape 5 is designed and is not this service.
+**Then the controls, in this order.** How customer data is kept apart. Credentials and the 400-day audit. Sign-in. The Assistant. Product build. The “not yet” list (no SOC 2, no penetration-test letter, no VPAT) comes after those controls.
 
 **How customer data is kept apart.** Database isolation; forced row-level security; no cross-customer read path, including Santan’s AI.
 
@@ -277,7 +284,7 @@ No dollar figures.
 
 **Build.** Product build installs no packages from the internet. (This is a product fact; do not imply the marketing site follows the same rule.)
 
-**Sign-in.** Google Identity Platform. Dated FedRAMP High sentence only after Q7. Explicit: that authorization is Google’s, not Pima’s.
+**Sign-in.** Open with how people get in: email and password, two-factor authentication, and roles, in the product. Then Google Identity Platform. Dated FedRAMP High sentence only after Q7. Explicit: that authorization is Google’s, not Pima’s. This marketing site has no sign-in because the product has no live URL.
 
 **Assistant.** Proposes; person decides; every AI call recorded; works with AI off; attachments to the vendor as text, not kept; no CUI in prompts.
 
@@ -291,9 +298,11 @@ No dollar figures.
 
 **Intro.** Tell Santan whether you want a demo, a quote, or both. There is no public signup and no checkout. The product is in Beta and has no public sign-in URL on this site.
 
+**While Q2 is unanswered.** The page states that the request form is not open yet. It does not show a disabled copy of the form.
+
 **CUI.** Short banner on the form page; **full canonical notice on the confirmation page** (required).
 
-**Form fields** (keep short):
+**Form fields** when the form is open (keep short). Order: intent, name, organization, work email, CUI acknowledgement, then the optional fields, then submit.
 
 | Field | Required | Notes |
 | --- | --- | --- |
@@ -325,6 +334,8 @@ Required CUI restatement (canonical).
 > [Canonical CUI notice]
 
 Do not name a person (Q5). If Q3 has an email, print it as a fallback. No “your trial is ready.” No calendar embed unless Santan later asks.
+
+After the canonical notice, link to `/product` and `/security` so a colleague can read what was requested and what the boundary is. Do not promise a response time.
 
 ## SEO drafts
 

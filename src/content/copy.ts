@@ -18,28 +18,74 @@ export const cuiCheckbox =
   "I understand that commercial Pima is not for Controlled Unclassified Information or covered defense information, and is not FedRAMP authorized." as const;
 
 /**
- * Q6. Option A is the homepage headline so the site can be built.
- * It is a placeholder, not a decided slogan. Do not label it as the brand line.
+ * Q6. Option A, split so the title is one sentence.
+ * Placeholder, not a decided slogan. Do not label it as the brand line.
  */
-export const homepageHeadline =
-  "Pima is Santan’s project-controls platform. The first thing for sale is Light Scheduler: plan unclassified work by named seat. This service is not for CUI and is not FedRAMP authorized." as const;
+export const homepageHeadline = "Light Scheduler is Pima’s first module." as const;
 
 export const homeLede =
-  "Pima is a project-controls platform. You buy Project Modules by named seat. The first module for sale is Light Scheduler." as const;
+  "Pima is Santan’s project-controls platform. You buy named seats and plan unclassified work. This service is not for CUI and is not FedRAMP authorized." as const;
+
+export const buyingOpen =
+  "Santan quotes named seats in Light Scheduler. This page has no prices." as const;
 
 export const buyingLede =
-  "There is no public price list and there are no tiers. Santan sends a quote." as const;
+  "There are no tiers. First accounts are created by hand." as const;
+
+export const homeBuying =
+  "Santan quotes named seats in Light Scheduler. There is no public price list, there are no tiers, and there is no self-serve signup." as const;
+
+export const seatIncludes =
+  "A Light Scheduler seat includes Project Registry, Calendars, Admin Panels, Security so far, Import / Export / Reporting, and the Assistant. None of these is a separate line item." as const;
+
+export const intentRoutes = [
+  {
+    href: "/product",
+    label: "See what ships",
+    detail: "Light Scheduler, and what a seat includes.",
+  },
+  {
+    href: "/buying",
+    label: "How a quote works",
+    detail: "Named seats. Santan quotes. No price list.",
+  },
+  {
+    href: "/security",
+    label: "What this service is not",
+    detail: "Not for CUI. How customer data is kept apart.",
+  },
+] as const;
 
 export const paymentIntent =
   "Card for small accounts; invoice and purchase order, net-30, for larger ones. Santan does not hold card numbers. No payment provider is on this site because none is chosen and nothing can be bought here." as const;
 
 export const trialNote =
-  "What a trial is has not been decided. There is no self-serve trial. Ask for a demo." as const;
+  "There is no self-serve trial. Ask for a demo." as const;
+
+/** Closing line under the homepage demo button. No response time. */
+export const homeClose =
+  "Santan will reply. This site does not create an account." as const;
+
+/**
+ * Labeled stand-in until Santan supplies a still.
+ * Replacement rules: docs/content.md, “Light Scheduler still”.
+ */
+export const planFigure = {
+  src: "/light-scheduler-placeholder.svg",
+  width: 960,
+  height: 540,
+  alt: "Placeholder for a still of Light Scheduler",
+  caption:
+    "Placeholder. The real still shows one unclassified plan in Light Scheduler: the grid and its outline, dates, durations, the Gantt, dependencies, and constraints. It does not show baseline, float, the critical path, or an EVMS foundation.",
+} as const;
 
 export const securityLede =
   "A FedRAMP deployment shape is designed and is not this service." as const;
 
 /** Q7 is unanswered. Do not add an authorization sentence, and do not transfer Google’s authorization onto Pima. */
+export const signInHow =
+  "People sign in with email and a password, two-factor authentication, and roles. Sign-in happens in the product, not on this site." as const;
+
 export const signInFact = "Sign-in is Google Identity Platform." as const;
 
 export const securityNotYet =
@@ -49,10 +95,15 @@ export const contactIntro =
   "Tell Santan whether you want a demo, a quote, or both. There is no public signup and no checkout. The product is in Beta and has no public sign-in URL on this site." as const;
 
 /** Q2 is unanswered. Do not POST the form until an inbox exists. */
+export const contactFormOpen = false as const;
+
 export const contactFormClosed = "The request form is not open yet." as const;
 
 export const thanksBody =
   "Thank you. Santan has the request. If you asked for a demo or a quote, Santan will reply. This site cannot create an account or take payment." as const;
+
+export const thanksNext =
+  "The product page describes Light Scheduler. The security page states the boundary and how data is kept apart." as const;
 
 export const laterModulesFollow =
   "Later modules follow in later releases." as const;
@@ -167,6 +218,43 @@ export const lightScheduler: FirstReleaseModule = {
   status: firstReleaseStatus,
 };
 
+export const lightSchedulerIntro =
+  "Plan the work without the formal apparatus." as const;
+
+export const unclassifiedPlanLead =
+  "One unclassified plan moves through Light Scheduler in this order." as const;
+
+export const notLightScheduler =
+  "Baseline, float, the critical path, and an EVMS-compliant foundation are Master Scheduler. That module is not on the first release." as const;
+
+/** Scan list and product walkthrough. Same facts as `lightScheduler.summary`. */
+export const lightSchedulerCapabilities = [
+  {
+    name: "Grid and outline",
+    detail: "The work sits in a grid and an outline.",
+  },
+  {
+    name: "Dates and durations",
+    detail: "Each line has a date and a duration.",
+  },
+  {
+    name: "Dependencies and constraints",
+    detail: "Lines depend on other lines. Constraints limit when work can sit.",
+  },
+  {
+    name: "Gantt",
+    detail: "The same plan, drawn as a Gantt.",
+  },
+  {
+    name: "Forward pass",
+    detail:
+      "The forward pass runs from those dates, durations, dependencies, and constraints.",
+  },
+] as const;
+
+export const notSeparateLineItems =
+  "Resources, Rates, Burdens, Organizations, Assignment, Rollup, and the Pricing Engine are not line items. They are not sold. They appear because a seated module or a seated person needs them." as const;
+
 export const laterModules: readonly LaterModule[] = [
   laterModule(
     "master-scheduler",
@@ -277,8 +365,18 @@ export const functions: readonly UnsoldItem[] = [
 export const assistantSummary =
   "The Assistant proposes a change. The person keeps it or discards it. Pima is usable with AI switched off. Do not attach CUI to a prompt." as const;
 
-export const whoItIsFor =
-  "Defense contractors and commercial teams who need unclassified planning, internal projects, commercial work, and proposals before award, on an ordinary cloud service." as const;
+export const whoLead =
+  "Defense contractors and commercial teams, on an ordinary cloud service:" as const;
+
+export const whoUses = [
+  "Unclassified planning",
+  "Internal projects",
+  "Commercial work",
+  "Proposals before award",
+] as const;
+
+export const audienceCue =
+  "First conversations are often with people who already buy Primavera, Microsoft Project, or Deltek." as const;
 
 export const dataIsolation =
   "Each customer’s data is kept apart by the database itself. Row-level security is forced. There is no cross-customer read path, including for Santan’s own AI." as const;

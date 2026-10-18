@@ -1,15 +1,16 @@
 ---
+import CapabilityList from "../components/CapabilityList.astro";
 import CtaRow from "../components/CtaRow.astro";
 import CuiNotice from "../components/CuiNotice.astro";
 import ModuleList from "../components/ModuleList.astro";
+import PlanFigure from "../components/PlanFigure.astro";
 import {
-  enterpriseModules,
-  enterpriseModulesNote,
-  functions,
-  functionsNote,
   includedWithLightScheduler,
   lightScheduler,
+  notLightScheduler,
+  notSeparateLineItems,
   seo,
+  unclassifiedPlanLead,
 } from "../content/copy";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
@@ -20,6 +21,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <CuiNotice />
 
   <section>
+    <h2>An unclassified plan</h2>
+    <p>{unclassifiedPlanLead}</p>
+    <PlanFigure />
+    <CapabilityList ordered />
+    <p>{notLightScheduler}</p>
+  </section>
+
+  <section id="included">
     <h2>Included with Light Scheduler</h2>
     <p>These are included with Light Scheduler. They are not sold separately.</p>
     <ul class="module-list">
@@ -37,15 +46,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <ModuleList />
 
   <section>
-    <h2>Enterprise Modules and functions</h2>
-    <p>{enterpriseModulesNote}</p>
-    <ul>
-      {enterpriseModules.map((item) => <li>{item.name}</li>)}
-    </ul>
-    <p>{functionsNote}</p>
-    <ul>
-      {functions.map((item) => <li>{item.name}</li>)}
-    </ul>
+    <h2>Not on the quote</h2>
+    <p>{notSeparateLineItems}</p>
   </section>
 
   <section>

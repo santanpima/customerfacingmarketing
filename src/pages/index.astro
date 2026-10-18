@@ -1,16 +1,22 @@
 ---
+import CapabilityList from "../components/CapabilityList.astro";
 import CtaRow from "../components/CtaRow.astro";
-import ModuleList from "../components/ModuleList.astro";
+import PlanFigure from "../components/PlanFigure.astro";
 import {
   assistantSummary,
-  buyingLede,
+  audienceCue,
+  homeBuying,
+  homeClose,
   homeLede,
   homepageHeadline,
-  includedWithLightScheduler,
-  lightScheduler,
+  intentRoutes,
+  laterModulesFollow,
+  lightSchedulerIntro,
+  seatIncludes,
   seo,
   trialNote,
-  whoItIsFor,
+  whoLead,
+  whoUses,
 } from "../content/copy";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
@@ -19,46 +25,99 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <h1>{homepageHeadline}</h1>
   <p>{homeLede}</p>
   <CtaRow />
-
-  <section>
-    <h2>What Light Scheduler is</h2>
-    <p>{lightScheduler.summary}</p>
-  </section>
-
-  <section>
-    <h2>What comes with Light Scheduler</h2>
-    <p>These are included with Light Scheduler. They are not sold separately.</p>
-    <ul class="module-list">
+  <nav aria-label="On this site">
+    <ul class="intent-list">
       {
-        includedWithLightScheduler.map((item) => (
+        intentRoutes.map((route) => (
           <li>
-            <h3>{item.name}</h3>
-            <p>{item.summary}</p>
+            <a href={route.href}>
+              {route.label}
+              <span>{route.detail}</span>
+            </a>
           </li>
         ))
       }
     </ul>
-  </section>
-
-  <ModuleList />
+  </nav>
 
   <section>
-    <h2>Who it is for</h2>
-    <p>{whoItIsFor}</p>
-    <p>
-      First conversations are often with people who already buy Primavera, Microsoft
-      Project, or Deltek.
-    </p>
-  </section>
-
-  <section>
-    <h2>Buying</h2>
-    <p>{buyingLede} No self-serve signup. Request a quote or a demo.</p>
-    <p>{trialNote}</p>
+    <h2>What Light Scheduler is</h2>
+    <p>{lightSchedulerIntro}</p>
+    <PlanFigure />
+    <CapabilityList namesOnly />
   </section>
 
   <section>
     <h2>The Assistant</h2>
     <p>{assistantSummary}</p>
   </section>
+
+  <section>
+    <h2>Who it is for</h2>
+    <p>{whoLead}</p>
+    <ul class="scan-list">
+      {whoUses.map((use) => <li>{use}</li>)}
+    </ul>
+    <p>{audienceCue}</p>
+  </section>
+
+  <section>
+    <h2>What a seat includes</h2>
+    <p>
+      {seatIncludes}
+      <a href="/product#included">See the product page.</a>
+    </p>
+    <p>
+      {laterModulesFollow}
+      <a href="/product#later-modules-heading">They are named on the product page.</a>
+    </p>
+  </section>
+
+  <section>
+    <h2>Buying</h2>
+    <p>
+      {homeBuying}{" "}
+      {trialNote}
+    </p>
+    <p><a href="/buying">How buying works</a></p>
+  </section>
+
+  <CtaRow quote={false} />
+  <p>{homeClose}</p>
 </BaseLayout>
+
+<style>
+  .intent-list {
+    max-width: var(--measure);
+    margin: var(--space-lg) 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .intent-list a {
+    display: grid;
+    gap: 0.15rem;
+    color: var(--color-dark-blue);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .intent-list a span {
+    font-weight: 400;
+  }
+
+  .intent-list a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  .scan-list {
+    max-width: var(--measure);
+    margin: 0 0 1rem;
+    padding-left: 1.25rem;
+    display: grid;
+    gap: 0.35rem;
+  }
+</style>

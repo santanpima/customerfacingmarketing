@@ -1,12 +1,11 @@
 ---
 import ContactForm from "../components/ContactForm.astro";
-import { contactFormClosed, contactIntro, seo } from "../content/copy";
+import { contactIntro, seo } from "../content/copy";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title={seo.contact.title} description={seo.contact.description}>
   <h1>Request a demo or a quote</h1>
   <p>{contactIntro}</p>
-  <p>{contactFormClosed}</p>
   <ContactForm />
 </BaseLayout>

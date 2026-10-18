@@ -11,6 +11,7 @@ import {
   securityNotYet,
   seo,
   signInFact,
+  signInHow,
 } from "../content/copy";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
@@ -34,16 +35,7 @@ if (!attachmentSentence) {
 <BaseLayout title={seo.security.title} description={seo.security.description}>
   <h1>Security</h1>
   <CuiNotice />
-
-  <section>
-    <h2>What this service is not</h2>
-    <p>
-      This service is not FedRAMP authorized, not FedRAMP Moderate equivalent,
-      and not for Controlled Unclassified Information or covered defense
-      information.
-    </p>
-    <p>{securityLede}</p>
-  </section>
+  <p>{securityLede}</p>
 
   <section>
     <h2>How customer data is kept apart</h2>
@@ -56,22 +48,11 @@ if (!attachmentSentence) {
   </section>
 
   <section>
-    <h2>Product build</h2>
-    <p>{productBuild}</p>
-    <p>
-      This is a fact about the product. It does not describe this marketing
-      site.
-    </p>
-  </section>
-
-  <section>
     <h2>Sign-in</h2>
+    <p>{signInHow}</p>
     <p>{signInFact}</p>
     <p>This does not transfer any Google authorization onto Pima.</p>
-    <p>
-      Sign-in happens in the product, not on this site. This marketing site has
-      no sign-in because the product has no live URL.
-    </p>
+    <p>This marketing site has no sign-in because the product has no live URL.</p>
   </section>
 
   <section>
@@ -79,6 +60,15 @@ if (!attachmentSentence) {
     <p>{assistantSummary}</p>
     <p>Every AI call is recorded.</p>
     <p>{attachmentSentence}</p>
+  </section>
+
+  <section>
+    <h2>Product build</h2>
+    <p>{productBuild}</p>
+    <p>
+      This is a fact about the product. It does not describe this marketing
+      site.
+    </p>
   </section>
 
   <section>

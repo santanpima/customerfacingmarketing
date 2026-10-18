@@ -2,6 +2,7 @@
 import CtaRow from "../components/CtaRow.astro";
 import {
   buyingLede,
+  buyingOpen,
   enterpriseModulesNote,
   functionsNote,
   laterModulesFollow,
@@ -15,9 +16,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout title={seo.buying.title} description={seo.buying.description}>
   <h1>How buying works</h1>
+  <p>{buyingOpen}</p>
   <p>{buyingLede}</p>
-  <p>First accounts are created by hand.</p>
-  <CtaRow />
+  <CtaRow emphasis="equal" />
 
   <section>
     <h2>What you buy</h2>
@@ -86,6 +87,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       Assistant, never the schedule.
     </p>
   </section>
+
+  <CtaRow emphasis="equal" />
 </BaseLayout>
 
 <style>

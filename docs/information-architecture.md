@@ -38,7 +38,7 @@ Mobile: same items in a simple disclosure. Do not invent extra items (“Resourc
 
 ### CUI chrome
 
-A short CUI banner is part of the chrome, not optional page flavor. Full canonical text is on `/product`, `/security`, and `/contact/thanks`, and at least the short banner + `/security` link on `/` and `/contact`.
+A short CUI banner is part of the chrome, not optional page flavor, and it is not dismissible. Full canonical text is on `/product`, `/security`, and `/contact/thanks`, and at least the short banner + `/security` link on `/` and `/contact`.
 
 ### Footer
 

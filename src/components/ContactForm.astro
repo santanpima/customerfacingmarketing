@@ -1,5 +1,5 @@
 ---
-import { contactFormClosed, cuiCheckbox } from "../content/copy";
+import { contactFormClosed, contactFormOpen, cuiCheckbox } from "../content/copy";
 
 const intentParam = Astro.url.searchParams.get("intent")?.trim().toLowerCase();
 const intent =
@@ -8,103 +8,118 @@ const intent =
     : "demo";
 ---
 
-<form class="contact-form" aria-describedby="contact-form-closed">
-  <fieldset disabled>
-    <legend>Demo or quote request</legend>
-    <div class="fields">
-      <div class="field">
-        <label for="contact-name">Name <span class="hint">(required)</span></label>
-        <input id="contact-name" name="name" type="text" autocomplete="name" required />
-      </div>
+{
+  contactFormOpen ? (
+    <form class="contact-form">
+      <fieldset>
+        <legend>Demo or quote request</legend>
+        <div class="fields">
+          <fieldset class="intent">
+            <legend>Intent <span class="hint">(required)</span></legend>
+            <div class="choices">
+              <label class="choice" for="intent-demo">
+                <input
+                  id="intent-demo"
+                  type="radio"
+                  name="intent"
+                  value="demo"
+                  required
+                  checked={intent === "demo"}
+                />
+                Demo
+              </label>
+              <label class="choice" for="intent-quote">
+                <input
+                  id="intent-quote"
+                  type="radio"
+                  name="intent"
+                  value="quote"
+                  checked={intent === "quote"}
+                />
+                Quote
+              </label>
+              <label class="choice" for="intent-both">
+                <input
+                  id="intent-both"
+                  type="radio"
+                  name="intent"
+                  value="both"
+                  checked={intent === "both"}
+                />
+                Both
+              </label>
+            </div>
+          </fieldset>
 
-      <div class="field">
-        <label for="contact-organization">Organization <span class="hint">(required)</span></label>
-        <input
-          id="contact-organization"
-          name="organization"
-          type="text"
-          autocomplete="organization"
-          required
-        />
-      </div>
+          <div class="field">
+            <label for="contact-name">
+              Name <span class="hint">(required)</span>
+            </label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" required />
+          </div>
 
-      <div class="field">
-        <label for="contact-email">Work email <span class="hint">(required)</span></label>
-        <input id="contact-email" name="email" type="email" autocomplete="email" required />
-      </div>
-
-      <fieldset class="intent">
-        <legend>Intent <span class="hint">(required)</span></legend>
-        <div class="choices">
-          <label class="choice" for="intent-demo">
+          <div class="field">
+            <label for="contact-organization">
+              Organization <span class="hint">(required)</span>
+            </label>
             <input
-              id="intent-demo"
-              type="radio"
-              name="intent"
-              value="demo"
+              id="contact-organization"
+              name="organization"
+              type="text"
+              autocomplete="organization"
               required
-              checked={intent === "demo"}
             />
-            Demo
+          </div>
+
+          <div class="field">
+            <label for="contact-email">
+              Work email <span class="hint">(required)</span>
+            </label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <label class="check" for="contact-cui">
+            <input id="contact-cui" name="cuiAcknowledgement" type="checkbox" value="yes" required />
+            <span>{cuiCheckbox}</span>
           </label>
-          <label class="choice" for="intent-quote">
+
+          <div class="field">
+            <label for="contact-role">
+              Role <span class="hint">(optional)</span>
+            </label>
+            <input id="contact-role" name="role" type="text" autocomplete="organization-title" />
+          </div>
+
+          <div class="field">
+            <label for="contact-seats">
+              Approximate seats for Light Scheduler <span class="hint">(optional)</span>
+            </label>
             <input
-              id="intent-quote"
-              type="radio"
-              name="intent"
-              value="quote"
-              checked={intent === "quote"}
+              id="contact-seats"
+              name="seats"
+              type="number"
+              inputmode="numeric"
+              min="1"
+              step="1"
+              autocomplete="off"
             />
-            Quote
-          </label>
-          <label class="choice" for="intent-both">
-            <input
-              id="intent-both"
-              type="radio"
-              name="intent"
-              value="both"
-              checked={intent === "both"}
-            />
-            Both
-          </label>
+          </div>
+
+          <div class="field">
+            <label for="contact-notes">
+              Notes <span class="hint">(optional)</span>
+            </label>
+            <textarea id="contact-notes" name="notes" rows="5"></textarea>
+          </div>
+
+          <button type="submit">Send request</button>
         </div>
       </fieldset>
-
-      <div class="field">
-        <label for="contact-role">Role <span class="hint">(optional)</span></label>
-        <input id="contact-role" name="role" type="text" autocomplete="organization-title" />
-      </div>
-
-      <div class="field">
-        <label for="contact-seats">
-          Approximate seats for Light Scheduler <span class="hint">(optional)</span>
-        </label>
-        <input
-          id="contact-seats"
-          name="seats"
-          type="number"
-          inputmode="numeric"
-          min="1"
-          step="1"
-          autocomplete="off"
-        />
-      </div>
-
-      <div class="field">
-        <label for="contact-notes">Notes <span class="hint">(optional)</span></label>
-        <textarea id="contact-notes" name="notes" rows="5"></textarea>
-      </div>
-
-      <label class="check" for="contact-cui">
-        <input id="contact-cui" name="cuiAcknowledgement" type="checkbox" value="yes" required />
-        <span>{cuiCheckbox}</span>
-      </label>
-
-      <button type="submit" disabled aria-describedby="contact-form-closed">Send request</button>
-    </div>
-  </fieldset>
-  <p id="contact-form-closed" class="closed-note">{contactFormClosed}</p>
-</form>
+    </form>
+  ) : (
+    <p class="closed-note">{contactFormClosed}</p>
+  )
+}
 
 <script is:inline>
   (function () {

@@ -1,0 +1,62 @@
+---
+import { lightSchedulerCapabilities } from "../content/copy";
+
+interface Props {
+  /** Product page: ordered steps with the explanation under each name. */
+  ordered?: boolean;
+  /** Home page: the five names only. The sentences stay on the product walkthrough. */
+  namesOnly?: boolean;
+}
+
+const { ordered = false, namesOnly = false } = Astro.props;
+---
+
+{
+  namesOnly ? (
+    <ul class="name-list">
+      {lightSchedulerCapabilities.map((item) => (
+        <li>{item.name}</li>
+      ))}
+    </ul>
+  ) : ordered ? (
+    <ol class="walkthrough">
+      {lightSchedulerCapabilities.map((item) => (
+        <li>
+          <h3>{item.name}</h3>
+          <p>{item.detail}</p>
+        </li>
+      ))}
+    </ol>
+  ) : (
+    <ul class="module-list">
+      {lightSchedulerCapabilities.map((item) => (
+        <li>
+          <h3>{item.name}</h3>
+          <p>{item.detail}</p>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+<style>
+  .walkthrough {
+    max-width: var(--measure);
+    margin: 1rem 0 0;
+    padding-left: 1.25rem;
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .walkthrough p {
+    margin: 0.35rem 0 0;
+  }
+
+  .name-list {
+    max-width: var(--measure);
+    margin: 1rem 0 0;
+    padding-left: 1.25rem;
+    display: grid;
+    gap: 0.35rem;
+  }
+</style>

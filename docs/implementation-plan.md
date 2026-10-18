@@ -84,6 +84,7 @@ Create only when implementation starts.
 │   │   ├── CuiBanner.astro
 │   │   ├── CuiNotice.astro        full canonical text
 │   │   ├── CtaRow.astro
+│   │   ├── PlanFigure.astro       Light Scheduler still; placeholder until Santan supplies one
 │   │   ├── ModuleList.astro       later-vs-now, never “available” for unbuilt
 │   │   └── ContactForm.astro
 │   ├── pages/
@@ -123,7 +124,7 @@ Source: [`brand/README.md`](../brand/README.md). Replaceable when a finished kit
 - Surfaces: White Smoke `#F5F5F5` page ground; Dark Blue `#0E2841` text, header/footer, dark bands; white type on Dark Blue
 - Header/footer lockup: navy on light, white on Dark Blue. Product name **Pima** is typeset; there is no Pima logo
 - CUI notice visually **primary** on `/security` and clearly visible on every other page — not a muted legal footer
-- No gradients-as-identity, no fake product screenshots unless Santan supplies them
+- No gradients-as-identity. No fake product screenshot presented as the product. A labeled placeholder is allowed until Santan supplies a still; the replacement rules are in [content.md](content.md) under “Light Scheduler still” (`public/light-scheduler-placeholder.svg`)
 - No testimonial cards, logo clouds, or “trusted by”
 - Do not copy the product’s signed-in Ask bar or `index.html`
 - Light Scheduler diagrams are optional and must not depict Master Scheduler / EVMS screens
@@ -256,7 +257,7 @@ Manual is enough for v1. Automate the build and a few link/a11y checks.
 - [ ] No numbers
 - [ ] No checkout
 - [ ] Quote CTA
-- [ ] Trial described as undecided / by request, not offered
+- [ ] Trial described as no self-serve trial; ask for a demo. Not offered. Do not print that a trial is undecided.
 
 **Security**
 
