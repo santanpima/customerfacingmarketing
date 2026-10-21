@@ -1,6 +1,6 @@
 # Information architecture
 
-Five public pages. No more until Santan asks.
+Five public pages. No more until santan.ai asks.
 
 ## Site map
 
@@ -24,7 +24,7 @@ Footer may add Terms and Privacy as **external** links to the product’s public
 
 ### Header (all pages)
 
-Left: Santan navy lockup (`brand/santan-ai-logo-navy.svg`) → `/`, with **Pima** typeset as the product name. There is no Pima logo yet. See [brand/README.md](../brand/README.md).  
+Left: santan.ai navy lockup (`brand/santan-ai-logo-navy.svg`) → `/`, with **Pima** typeset as the product name. There is no Pima logo yet. See [brand/README.md](../brand/README.md).  
 Right, in order:
 
 1. Product
@@ -38,39 +38,38 @@ Mobile: same items in a simple disclosure. Do not invent extra items (“Resourc
 
 ### CUI chrome
 
-A short CUI banner is part of the chrome, not optional page flavor, and it is not dismissible. Full canonical text is on `/product`, `/security`, and `/contact/thanks`, and at least the short banner + `/security` link on `/` and `/contact`.
+Do not put a short CUI banner in the header or footer. Do not print “This service is not for CUI and is not FedRAMP authorized.” Full canonical text is on `/product`, `/security`, and `/contact/thanks`. The Security nav item and `/security` are how other pages reach the boundary.
 
 ### Footer
 
-- Santan lockup (navy on White Smoke, white if the footer is Dark Blue)
-- Short CUI banner → `/security`
+- santan.ai lockup (navy on White Smoke, white if the footer is Dark Blue)
 - Product, Buying, Security, Contact
 - No Sign in (Q1)
 - Terms, Privacy (if Q8 / Q9)
 - Email (if Q3)
-- © Santan
+- © santan.ai
 
 ## Page intents and primary actions
 
 | Page | Visitor should leave knowing | Primary action |
 | --- | --- | --- |
-| Home | What Pima is; first sale is Light Scheduler; not for CUI; price/trial by request | Request a demo |
+| Home | What Pima is for (unclassified schedule); first sale is Light Scheduler; not for CUI; price/trial by request | Request a demo |
 | Product | What Light Scheduler does; what is included; what is later | Request a demo |
-| Buying | Named seats, no tiers, no prices, quote from Santan, no checkout | Request a quote |
-| Security | Not authorized, not for CUI; true isolation/AI/sign-in facts; no fake certs | Contact Santan |
+| Buying | Named seats, quote from santan.ai, no public price list, no checkout | Request a quote |
+| Security | Not authorized, not for CUI; isolation facts first after CUI; no fake certs | Contact santan.ai |
 | Contact | How to ask; acknowledgement of CUI | Submit form |
-| Thanks | Request received; CUI again; no account was created; Santan will reply | Done |
+| Thanks | Request received; CUI again; no account was created; santan.ai will reply | Done |
 
 ## Conversion
 
-One conversion: **talk to Santan**.
+One conversion: **talk to santan.ai**.
 
 ```text
 any page  →  /contact?intent=demo|quote|both  →  POST  →  /contact/thanks
 existing customer  →  not offered on this site until Q1 has a live URL
 ```
 
-There is no second funnel (trial, signup, pay). Do not add calendar widgets, chat, or “book a time” unless Santan asks.
+There is no second funnel (trial, signup, pay). Do not add calendar widgets, chat, or “book a time” unless santan.ai asks.
 
 Query `intent` prefills the form radio. Direct `/contact` defaults to **Both** or unselected-required, implementer’s choice; recommended default **Demo**.
 
@@ -99,11 +98,10 @@ Do not create `/blog`, `/careers`, `/customers`, `/legal`, `/terms`, `/privacy`,
 ## Accessibility and reading order
 
 - One `h1` per page
-- CUI banner is in the document order near the top, not only CSS-sticky after the fold
 - Form labels are visible, not placeholder-only
 - CUI checkbox is a real label, keyboard reachable, not pre-checked
 - No Sign in control until Q1 is reopened with a live URL
-- Target sizes and contrast suitable for a professional site; no animation that hides the CUI line
+- Target sizes and contrast suitable for a professional site; no animation that hides the canonical CUI notice
 
 ## What a stranger must see without hunting
 
@@ -111,10 +109,10 @@ Gate 1 “done when” mapped to IA:
 
 | Criterion | Where it is unavoidable |
 | --- | --- |
-| What Pima is | Home hero |
-| First thing for sale is Light Scheduler | Home hero + Product `h1` |
+| What Pima is | Home hero (unclassified schedule) |
+| First thing for sale is Light Scheduler | Home lede + Product `h1` |
 | Price and trial by request | Home + Buying + Contact (no other path) |
-| Not for CUI; not FedRAMP authorized | Banner on every page; full text on product, security, thanks |
+| Not for CUI; not FedRAMP authorized | Full canonical text on product, security, thanks; Security nav from every page |
 | Ask for demo or quote | Header Contact + page CTAs + `/contact` |
 | Cannot create an account | No signup route; Sign in omitted |
 | Cannot pay | No checkout route |

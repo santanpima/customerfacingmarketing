@@ -26,7 +26,7 @@ Chosen for a small, copy-heavy, mostly static site that must stay out of the pro
 
 ### Hosting alternatives (framework is not open)
 
-- **Cloudflare Pages** + Pages Function, if Santan wants preview URLs and DNS there instead of GCP
+- **Cloudflare Pages** + Pages Function, if santan.ai wants preview URLs and DNS there instead of GCP
 - **Cloud Run** serving the Astro static output, only if Hosting/CDN is blocked. Still a *different* service from the product
 
 ### Explicitly not in v1
@@ -64,7 +64,7 @@ Create only when implementation starts.
 .
 ├── README.md
 ├── docs/                          already written
-├── brand/                         temporary Santan marks + tokens (Q11)
+├── brand/                         temporary santan.ai marks + tokens (Q11)
 ├── astro.config.ts
 ├── package.json
 ├── tsconfig.json
@@ -77,14 +77,13 @@ Create only when implementation starts.
 │   ├── env.d.ts
 │   ├── content/                   optional: page Markdown sourced from docs/content.md
 │   ├── layouts/
-│   │   └── BaseLayout.astro       header, CUI banner, footer, SEO
+│   │   └── BaseLayout.astro       header, footer, SEO
 │   ├── components/
 │   │   ├── Header.astro
 │   │   ├── Footer.astro
-│   │   ├── CuiBanner.astro
-│   │   ├── CuiNotice.astro        full canonical text
+│   │   ├── CuiNotice.astro        full canonical text on product, security, thanks
 │   │   ├── CtaRow.astro
-│   │   ├── PlanFigure.astro       Light Scheduler still; placeholder until Santan supplies one
+│   │   ├── PlanFigure.astro       Light Scheduler still; placeholder until santan.ai supplies one
 │   │   ├── ModuleList.astro       later-vs-now, never “available” for unbuilt
 │   │   └── ContactForm.astro
 │   ├── pages/
@@ -124,7 +123,7 @@ Source: [`brand/README.md`](../brand/README.md). Replaceable when a finished kit
 - Surfaces: White Smoke `#F5F5F5` page ground; Dark Blue `#0E2841` text, header/footer, dark bands; white type on Dark Blue
 - Header/footer lockup: navy on light, white on Dark Blue. Product name **Pima** is typeset; there is no Pima logo
 - CUI notice visually **primary** on `/security` and clearly visible on every other page — not a muted legal footer
-- No gradients-as-identity. No fake product screenshot presented as the product. A labeled placeholder is allowed until Santan supplies a still; the replacement rules are in [content.md](content.md) under “Light Scheduler still” (`public/light-scheduler-placeholder.svg`)
+- No gradients-as-identity. No fake product screenshot presented as the product. A labeled placeholder is allowed until santan.ai supplies a still; the replacement rules are in [content.md](content.md) under “Light Scheduler still” (`public/light-scheduler-placeholder.svg`)
 - No testimonial cards, logo clouds, or “trusted by”
 - Do not copy the product’s signed-in Ask bar or `index.html`
 - Light Scheduler diagrams are optional and must not depict Master Scheduler / EVMS screens
@@ -137,7 +136,7 @@ Source: [`brand/README.md`](../brand/README.md). Replaceable when a finished kit
 3. Reject file uploads
 4. Send an email to Q2: name, org, email, intent, optional fields, timestamp
 5. Redirect to `/contact/thanks` (PRG)
-6. Thanks page: `noindex`, canonical CUI text, no “account created”, no SLA, “Santan will reply” (Q5)
+6. Thanks page: `noindex`, canonical CUI text, no “account created”, no SLA, “santan.ai will reply” (Q5)
 7. Failure: stay on `/contact` with a generic error, still no SLA
 
 Until Q2 exists, ship the pages with the form **disabled** and a line that contact is not open yet — or hold the production domain. Do not POST into a black hole.
@@ -160,25 +159,25 @@ Do not skip the copy freeze into a pretty empty layout.
 - [x] This plan
 - [x] Open questions
 
-**Exit:** Plan written. Stack decided: Astro + TypeScript. Q1 Sign in hidden; Q5 “Santan will reply”; Q6 Option A as placeholder headline (B–F retained); Q11 temporary brand in `brand/`. Do not write application code until implementation is requested.
+**Exit:** Plan written. Stack decided: Astro + TypeScript. Q1 Sign in hidden; Q5 “santan.ai will reply”; Q6 Option B as current homepage headline (A and C–F retained); Q11 temporary brand in `brand/`. Do not write application code until implementation is requested.
 
 ### Phase 1 — Foundation
 
 - Scaffold Astro + TypeScript
-- Tokens, `BaseLayout`, header, footer, CUI banner
+- Tokens, `BaseLayout`, header, footer
 - Routes and redirects from the IA, with stub headings
 - `robots.txt`, 404
 - CI: typecheck + build
 - Env vars wired so Sign in / legal links **disappear when empty**
 
-**Exit:** Every route renders chrome + CUI banner locally.
+**Exit:** Every route renders chrome locally.
 
 ### Phase 2 — Page copy
 
 - Home, Product, Buying, Security from [content.md](content.md)
 - Module list component that cannot mark later modules as available
 - SEO titles, descriptions, Open Graph
-- Homepage headline is Option A (placeholder). Keep B–F in docs so a later swap is copy-only
+- Homepage headline is Option B (current). Keep A and C–F in docs so a later swap is copy-only
 
 **Exit:** A reviewer can walk the five pages and tick the “done when” list using only the UI.
 
@@ -222,7 +221,7 @@ Do not skip the copy freeze into a pretty empty layout.
 6. Do not use Beta testers or invented logos
 7. Keep third-party scripts on this origin only; never propose them for the product
 8. If asked for both a marketing widget and something that would need the product, implement only this site
-9. Positioning: Option A in the hero as a **placeholder**. Never label it as a decided slogan. Keep B–F in `docs/content.md`
+9. Positioning: Option B in the hero as the **current** headline. Never label it as a decided slogan. Keep A and C–F in `docs/content.md`
 10. When copy is uncertain, omit. Do not soften CUI to fill a hole
 
 ## 9. Test plan
@@ -232,14 +231,14 @@ Manual is enough for v1. Automate the build and a few link/a11y checks.
 **Every page**
 
 - [ ] Header: Product, Buying, Security, Contact
-- [ ] CUI short banner visible without scrolling on a laptop viewport
+- [ ] No short CUI banner in header or footer
 - [ ] No Sign in control anywhere (`PUBLIC_APP_URL` empty per Q1)
 - [ ] Footer has no Terms/Privacy if URLs empty
 - [ ] No price, tier name, “start free”, testimonial, logo cloud
 
 **Home**
 
-- [ ] Pima named correctly; Santan named
+- [ ] Pima named correctly; santan.ai named
 - [ ] Light Scheduler is the first thing for sale
 - [ ] Later modules are later
 - [ ] Primary CTA is demo or quote, not signup
@@ -294,7 +293,7 @@ A stranger on `santan.ai` can:
 - [ ] See that the first thing for sale is Light Scheduler
 - [ ] See that price and a trial are by request
 - [ ] See that this service is not for CUI and is not FedRAMP authorized
-- [ ] Ask Santan for a demo or a quote
+- [ ] Ask santan.ai for a demo or a quote
 
 And cannot:
 
@@ -322,7 +321,7 @@ Order of magnitude for a single implementer after copy is frozen:
 | 4 Domain / brand | ~0.5 day, blocked on DNS. Q11 temporary kit is in `brand/` |
 | 5 Hardening + browser pass | ~0.5 day |
 
-Critical path is **Santan answers**, not code: **Q2** (form inbox), **Q4** (DNS). Q1, Q5, Q6, and Q11 are decided enough to implement.
+Critical path is **santan.ai answers**, not code: **Q2** (form inbox), **Q4** (DNS). Q1, Q5, Q6, and Q11 are decided enough to implement.
 
 ## 12. Suggested first implementation commit sequence
 
@@ -340,7 +339,7 @@ Do not open with a theme pack or a blog.
 
 ## 13. After Gate 1 (out of scope now)
 
-Only if Santan asks:
+Only if santan.ai asks:
 
 - Price list on `/buying` when F1 exists
 - Trial language when E6 exists

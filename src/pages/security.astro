@@ -5,12 +5,14 @@ import {
   assistantSummary,
   credentialsAndAudit,
   dataIsolation,
+  fedrampShapeNote,
   includedWithLightScheduler,
   productBuild,
   securityLede,
   securityNotYet,
   seo,
   signInFact,
+  signInGoogleCaveat,
   signInHow,
 } from "../content/copy";
 import BaseLayout from "../layouts/BaseLayout.astro";
@@ -33,49 +35,49 @@ if (!attachmentSentence) {
 ---
 
 <BaseLayout title={seo.security.title} description={seo.security.description}>
-  <h1>Security</h1>
-  <CuiNotice />
-  <p>{securityLede}</p>
-
-  <section>
-    <h2>How customer data is kept apart</h2>
-    <p>{dataIsolation}</p>
+  <section class="band band-dark">
+    <div class="inner">
+      <h1>Security</h1>
+      <p class="lede">{securityLede}</p>
+    </div>
   </section>
 
-  <section>
-    <h2>Credentials and audit</h2>
-    <p>{credentialsAndAudit}</p>
+  <section class="band">
+    <div class="inner stack">
+      <CuiNotice />
+      <p>{fedrampShapeNote}</p>
+      <div class="cell-grid">
+        <section>
+          <h2>How customer data is kept apart</h2>
+          <p>{dataIsolation}</p>
+        </section>
+        <section>
+          <h2>Credentials and audit</h2>
+          <p>{credentialsAndAudit}</p>
+        </section>
+        <section>
+          <h2>Sign-in</h2>
+          <p>{signInHow}</p>
+          <p>{signInFact}</p>
+          <p>{signInGoogleCaveat}</p>
+        </section>
+        <section>
+          <h2>The Assistant</h2>
+          <p>{assistantSummary}</p>
+          <p>Every AI call is recorded.</p>
+          <p>{attachmentSentence}</p>
+        </section>
+        <section>
+          <h2>Product build</h2>
+          <p>{productBuild}</p>
+        </section>
+        <section>
+          <h2>Not yet</h2>
+          <p>{securityNotYet}</p>
+          <p><a href="/contact">Contact</a></p>
+        </section>
+      </div>
+      <CtaRow />
+    </div>
   </section>
-
-  <section>
-    <h2>Sign-in</h2>
-    <p>{signInHow}</p>
-    <p>{signInFact}</p>
-    <p>This does not transfer any Google authorization onto Pima.</p>
-    <p>This marketing site has no sign-in because the product has no live URL.</p>
-  </section>
-
-  <section>
-    <h2>The Assistant</h2>
-    <p>{assistantSummary}</p>
-    <p>Every AI call is recorded.</p>
-    <p>{attachmentSentence}</p>
-  </section>
-
-  <section>
-    <h2>Product build</h2>
-    <p>{productBuild}</p>
-    <p>
-      This is a fact about the product. It does not describe this marketing
-      site.
-    </p>
-  </section>
-
-  <section>
-    <h2>Not yet</h2>
-    <p>{securityNotYet}</p>
-    <p><a href="/contact">Contact</a></p>
-  </section>
-
-  <CtaRow />
 </BaseLayout>

@@ -5,7 +5,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title={seo.contact.title} description={seo.contact.description}>
-  <h1>Request a demo or a quote</h1>
-  <p>{contactIntro}</p>
-  <ContactForm />
+  <section class="band">
+    <div class="inner">
+      <h1>Request a demo or a quote</h1>
+      <p class="lede">{contactIntro}</p>
+      <ContactForm />
+    </div>
+  </section>
 </BaseLayout>

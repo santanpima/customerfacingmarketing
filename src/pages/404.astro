@@ -4,10 +4,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title={seo.notFound.title} description={seo.notFound.description} noindex>
-  <h1>Page not found</h1>
-  <p>{seo.notFound.description}</p>
-  <ul class="text-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/contact">Contact</a></li>
-  </ul>
+  <section class="band">
+    <div class="inner">
+      <h1>Page not found</h1>
+      <p>{seo.notFound.description}</p>
+      <ul class="text-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </section>
 </BaseLayout>

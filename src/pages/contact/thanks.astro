@@ -5,12 +5,16 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title={seo.thanks.title} description={seo.thanks.description} noindex>
-  <h1>Request received</h1>
-  <p>{thanksBody}</p>
-  <CuiNotice />
-  <p>{thanksNext}</p>
-  <ul class="text-links">
-    <li><a href="/product">Product</a></li>
-    <li><a href="/security">Security</a></li>
-  </ul>
+  <section class="band">
+    <div class="inner">
+      <h1>Request received</h1>
+      <p>{thanksBody}</p>
+      <CuiNotice />
+      <p>{thanksNext}</p>
+      <ul class="text-links">
+        <li><a href="/product">Product</a></li>
+        <li><a href="/security">Security</a></li>
+      </ul>
+    </div>
+  </section>
 </BaseLayout>

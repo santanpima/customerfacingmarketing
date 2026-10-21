@@ -27,18 +27,18 @@ Nearby work this site **supports** and must **not pretend is done**:
 ## 2. Names and hosts
 
 - Product name: **Pima**, written that way, not PIMA (register 33, D64)
-- Company: **Santan** (santan.ai)
+- Company: **santan.ai**
 - Marketing host: `santan.ai`
 - Application host: none live. The product is in Beta. Document 54 E4 still records `app.santan.ai` as a candidate; **do not link it**. Q1 (16 October 2026): **Sign in stays hidden** until a production URL exists
 - Older charter also names `santanaipima.com` as a user-alias domain, with a government domain held in reserve (document 01). Do not select it here
-- There is no public self-registration. People are invited by their organization’s administrator, or, for the first customers, created by Santan
+- There is no public self-registration. People are invited by their organization’s administrator, or, for the first customers, created by santan.ai
 - Password reset and two-factor authentication exist **in the product**. This site does not perform them and must not explain them as if it does
 
 ## 3. What is for sale now
 
 There are **no tiers**. Register 33, D11 abolished the tier entity on 25 September 2026. Starter / Advanced / Professional / Enterprise and the seat totals in document 53 §2 are stale. Do not publish a price, a “from $X”, or any tier name.
 
-A quote comes from Santan until the founder publishes a new price list (document 54, F1).
+A quote comes from santan.ai until the founder publishes a new price list (document 54, F1).
 
 ### 3.1 Project Modules (bought, named seats)
 
@@ -67,7 +67,7 @@ These arrive or appear with Light Scheduler and are built:
 - **Project Registry** — projects, people, access, change log, currency
 - **Calendars** — working time; the product never fetches holidays from the web
 - **Admin Panels** — the customer’s own administrator invites people, assigns seats, suspends and removes
-- **Security so far** — email/password sign-in, two-factor authentication, roles
+- **Security so far** — email/password sign-in, two-factor authentication, roles. On this site the label is **Security**.
 - **Import, Export, and Reporting** — including printing and the Graphic
 - **The Assistant**
 
@@ -97,7 +97,7 @@ They appear wherever a seated person needs them. Do not list them as products or
   1. Each module licence will bring monthly AI Credits, pooled at the account
   2. When they run out or expire, the customer’s own model key takes over, or they buy more credits
 - Quantities and the credit price are **not set**. Credits are **not built**. The Beta runs on the customer’s own key
-- Do not quote a credit price, a token allowance, or a model vendor as Santan’s
+- Do not quote a credit price, a token allowance, or a model vendor as santan.ai's
 - If the customer uses their own key, their contract with that vendor governs
 - AI is the only thing ever metered. A hard stop can only stop the Assistant, never the schedule
 
@@ -107,14 +107,14 @@ There is **no checkout**. Nothing can be bought inside the product. “Buy more�
 
 The order form, payment, and the control plane that would record a purchase are undesigned. First customers’ accounts are created by hand.
 
-Commercial intent (document 54, F3), for copy about *how Santan intends to sell*, not for a working pay flow:
+Commercial intent (document 54, F3), for copy about *how santan.ai intends to sell*, not for a working pay flow:
 
 - Card for small accounts
 - Invoice and purchase order on net-30 terms for larger accounts (how defense contractors buy)
-- Santan must not hold card numbers
+- santan.ai must not hold card numbers
 - No payment provider has been chosen
 
-**Do not build** a cart, a card form, or a self-serve purchase. Do not add a payment provider, a CRM, or a chatbot unless Santan asks.
+**Do not build** a cart, a card form, or a self-serve purchase. Do not add a payment provider, a CRM, or a chatbot unless santan.ai asks.
 
 ## 6. Account shapes
 
@@ -123,13 +123,13 @@ Chosen at sale, separately from modules (document 53, register 33 A1). Six shape
 | # | Shape | First release? |
 | --- | --- | --- |
 | 1 | Joint tenancy, one login. Shared database, row-level security | Available |
-| 2 | Joint tenancy, multiple logins. Same. **The Beta is this shape:** one Santan account | Available; Beta |
+| 2 | Joint tenancy, multiple logins. Same. **The Beta is this shape:** one santan.ai account | Available; Beta |
 | 3 | Single tenant, one login, dedicated database. Kept available; no separate order-form line until someone asks | Available if asked |
 | 4 | Single tenant, multiple logins, dedicated database (own instance only if a contract demands it) | Available if a contract demands it |
 | 5 | FedRAMP: a separate deployment inside a Google Assured Workloads boundary | **Not** the first release. **Not authorized** |
 | 6 | Customer-operated, on the customer’s own infrastructure, full suite, flat rate. No update path and no enforcement that can lock a live schedule | **Not** the first release |
 
-Do not publish infrastructure prices. Figures in document 53 (~$17/month Beta, ~$107/month dedicated-core database) are **Santan’s costs**, not customer prices.
+Do not publish infrastructure prices. Figures in document 53 (~$17/month Beta, ~$107/month dedicated-core database) are **santan.ai's costs**, not customer prices.
 
 ## 7. Account lifecycle (deferred from v1 pages)
 
@@ -176,7 +176,7 @@ Forbidden phrases: “FedRAMP ready”, “FedRAMP compliant”, “government c
 
 Document 54, section 7. Say them as facts. Do not turn them into a certification.
 
-1. Each customer’s data is kept apart by the database itself. Row-level security is forced. There is no cross-customer read path, including for Santan’s own AI
+1. Each customer’s data is kept apart by the database itself. Row-level security is forced. There is no cross-customer read path, including for santan.ai's own AI
 2. The organization is never carried in the sign-in token. No long-lived service-account keys. Credentials sit in a secret store. Audit logs are kept 400 days
 3. The product build installs no packages from the internet
 4. Sign-in is Google Identity Platform. Last internal check: FedRAMP High authorized on 15 September 2026. **Re-check 16 October 2026:** Identity Platform still appears in Google’s [FedRAMP and DoD compliance scope](https://docs.cloud.google.com/docs/security/compliance/fedramp-dod-compliance-scope) (document last reviewed 18 August 2026; services table updated August 2026) as a listed service in the FedRAMP High scope. **Do not transfer that authorization onto Pima.** Re-check the live Google page before quoting, and date the quote
@@ -202,7 +202,7 @@ A security overview page is wanted (document 54, S1). A standard questionnaire a
 
 Document 27, open question C (24 September 2026): the one sentence on the website. Several other questions in that document were later decided (tiers gone; Assistant proposes, person keeps or discards). The one-sentence claim **was not**.
 
-Draft options live in [content.md](content.md). Q6 (16 October 2026): **Option A** is the homepage headline so implementation can start. It is a placeholder, not a decided slogan. Options B–F remain documented. Expect the sentence to change.
+Draft options live in [content.md](content.md). Q6 (16 October 2026): Option A was the homepage headline so implementation could start. Q6 (21 October 2026): the homepage uses **Option B**, split: title “Pima is for the unclassified schedule”; lede carries platform, Light Scheduler first for sale, named seats, and the short CUI line. It is the current headline, not a decided slogan. Options A and C–F remain documented.
 
 ## 13. Build constraints (this repository only)
 
@@ -210,21 +210,21 @@ The product’s rules (no third-party fetches, no web fonts, a specification ent
 
 - Marketing analytics, fonts, and form tools belong **here** so they never land in the product
 - Do not vendor this site into the product
-- Do not add a payment provider, a CRM, or a chatbot unless Santan asks
+- Do not add a payment provider, a CRM, or a chatbot unless santan.ai asks
 
 ## 14. Explicitly out of scope until asked
 
 - Blog, careers, checkout, customer logos, testimonials, “trusted by”
-- The eight Beta testers inside one Santan account are **not** public references
+- The eight Beta testers inside one santan.ai account are **not** public references
 - Competitor comparison pages
 - Support SLA, hours, phone tree
 - Public demo login
 - Cart, card form, self-serve purchase or signup
-- Prices, tiers, credit quantities, model-vendor-as-Santan’s
+- Prices, tiers, credit quantities, model-vendor-as-santan.ai's
 - Second legal terms, privacy policy, or MSA
 - SOC 2 / pen test / VPAT / FedRAMP-ready language
 - Restyling the signed-in product (`index.html`, the Ask bar)
 
 ## 15. Done when
 
-A stranger can learn what Pima is, see that the first thing for sale is the Light Scheduler, see that price and a trial are by request, see that this service is not for CUI and is not FedRAMP authorized, and can ask Santan for a demo or a quote. They cannot create an account, pay, or read a contract the lawyer has not written.
+A stranger can learn what Pima is, see that the first thing for sale is the Light Scheduler, see that price and a trial are by request, see that this service is not for CUI and is not FedRAMP authorized, and can ask santan.ai for a demo or a quote. They cannot create an account, pay, or read a contract the lawyer has not written.

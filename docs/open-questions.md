@@ -1,8 +1,8 @@
-# Open questions for Santan
+# Open questions for santan.ai
 
 Items this site cannot honestly invent. Split into **launch blockers** and **can ship with a placeholder**.
 
-Owner on every row is Santan unless noted. Update this file when a decision lands, then update [requirements.md](requirements.md) and [content.md](content.md).
+Owner on every row is santan.ai unless noted. Update this file when a decision lands, then update [requirements.md](requirements.md) and [content.md](content.md).
 
 ## Launch blockers still open
 
@@ -49,7 +49,7 @@ Type (font family) was not in the Q11 drop. Until supplied, self-host a grotesqu
 Recorded so a later draft does not “clarify” them back into old documents.
 
 - Product name is Pima, not PIMA
-- Company is Santan
+- Company is santan.ai
 - Tiers are abolished
 - No public prices on this site
 - Light Scheduler is the only Project Module in the first release
@@ -63,6 +63,7 @@ Recorded so a later draft does not “clarify” them back into old documents.
 - This site is not the product and is not bound by the product’s “no third-party fetches / no web fonts” rule
 - Framework is **Astro** and **TypeScript** (confirmed 16 October 2026). Do not substitute another framework
 - **Q1 (16 October 2026):** The product is in Beta and has **no live URL**. **Sign in stays hidden.** Do not link `app.santan.ai` or any guessed host. Revisit when a production application URL exists.
-- **Q5 (16 October 2026):** Confirmation and contact copy name **Santan**, not a person. “Santan will reply.”
+- **Q5 (16 October 2026):** Confirmation and contact copy name **santan.ai**, not a person. “santan.ai will reply.”
 - **Q6 (16 October 2026):** Use **Option A** as the homepage headline so implementation can start. Options B–F stay documented in [content.md](content.md). Option A is a **placeholder**, not a decided campaign slogan. Expect it to change; swapping the hero sentence must not require an IA change.
+- **Q6 (21 October 2026):** Homepage uses **Option B**, split. Title: “Pima is for the unclassified schedule.” Lede: platform, Light Scheduler first for sale, named seats, short CUI. Still not a decided campaign slogan. Options A and C–F remain in [content.md](content.md). Swapping the hero sentence must not require an IA change.
 - **Q11 (16 October 2026):** Temporary brand is in [`brand/`](../brand/README.md). Tokens: Dark Blue `#0E2841`, White Smoke `#F5F5F5`. Marks: icon, `santan.ai` wordmark, and lockup, each in navy (`#0F264F`) and white, **SVG preferred** (PNG fallback). No Pima logotype. No type files. Treat as replaceable.

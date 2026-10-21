@@ -1,6 +1,6 @@
 # Pima marketing website
 
-Public marketing site for **Pima**, a project-controls platform from **Santan** ([santan.ai](https://santan.ai)).
+Public marketing site for **Pima**, a project-controls platform from [**santan.ai**](https://santan.ai).
 
 This repository is the company-domain website. It is not the product, not a folder of the product repository, and not served by the product’s Cloud Run service.
 
@@ -18,7 +18,7 @@ Gate 1, owned by marketing. A stranger should be able to:
 - See that the first thing for sale is **Light Scheduler**
 - See that price and a trial are **by request**
 - See that this service is **not for CUI** and is **not FedRAMP authorized**
-- Ask Santan for a **demo** or a **quote**
+- Ask santan.ai for a **demo** or a **quote**
 
 They must not be able to create an account, pay, or read a contract counsel has not written.
 
@@ -32,7 +32,7 @@ They must not be able to create an account, pay, or read a contract counsel has 
 | `/security` | Security, including the CUI statement |
 | `/contact` | Demo or quote request |
 
-No other pages until Santan asks. See [docs/information-architecture.md](docs/information-architecture.md).
+No other pages until santan.ai asks. See [docs/information-architecture.md](docs/information-architecture.md).
 
 ## Documentation
 
@@ -42,8 +42,8 @@ No other pages until Santan asks. See [docs/information-architecture.md](docs/in
 | [docs/content.md](docs/content.md) | Voice, claims matrix, positioning drafts, page copy. |
 | [docs/information-architecture.md](docs/information-architecture.md) | Routes, navigation, CTAs, form, SEO. |
 | [docs/implementation-plan.md](docs/implementation-plan.md) | Stack, structure, phases, launch checklist. |
-| [docs/open-questions.md](docs/open-questions.md) | Decisions Santan still owes. |
-| [brand/README.md](brand/README.md) | Temporary Santan marks and color tokens (Q11). |
+| [docs/open-questions.md](docs/open-questions.md) | Decisions santan.ai still owes. |
+| [brand/README.md](brand/README.md) | Temporary santan.ai marks and color tokens (Q11). |
 
 Where an older product document disagrees with register 33, the register governs. Where this marketing documentation disagrees with documents 01, 08, or 53 §3, this documentation governs for the site.
 
@@ -69,7 +69,7 @@ Do not pick a final application hostname in this repo.
 ## Brand
 
 - Product: **Pima** (not PIMA), typeset until a Pima mark exists
-- Company: **Santan**, using the temporary kit in [brand/](brand/README.md)
+- Company: **santan.ai**, using the temporary kit in [brand/](brand/README.md)
 - Colors: Dark Blue `#0E2841`, White Smoke `#F5F5F5`. Navy mark fill in SVG is `#0F264F` — do not recolor it
 - Marks: SVG first (icon, wordmark, lockup; navy and white). PNG is fallback. See [brand/](brand/README.md)
-- Homepage headline is Option A as a **placeholder**. Other positioning drafts stay in [docs/content.md](docs/content.md)
+- Homepage headline is Option B (split): “Pima is for the unclassified schedule.” Other positioning drafts stay in [docs/content.md](docs/content.md)

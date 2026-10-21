@@ -4,7 +4,9 @@
   --color-white: #ffffff;
   --font-sans: "Segoe UI", system-ui, sans-serif;
   --measure: 40rem;
+  --measure-display: 12ch;
   --page-width: 72rem;
+  --inset: 1.5rem;
   --space-sm: 0.75rem;
   --space-md: 1.25rem;
   --space-lg: 2rem;

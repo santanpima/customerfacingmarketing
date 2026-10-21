@@ -1,4 +1,4 @@
-# Temporary Santan brand (Q11)
+# Temporary santan.ai brand (Q11)
 
 Supplied 16 October 2026. **Temporary.** Replace when a finished kit exists. There is no Pima logotype yet.
 
@@ -35,10 +35,10 @@ Favicon: navy icon SVG on light; PNG icon if a raster favicon is required. Dedic
 
 ## How it sits with Pima
 
-- These marks are **Santan**, company identity. The wordmark reads `santan.ai`, not Pima.
+- These marks are **santan.ai**, company identity. The wordmark reads `santan.ai`, not Pima.
 - **Pima** is typeset as the product name, not as a logo, until a Pima mark exists.
 - Header: navy lockup linking `/`, with the word **Pima** nearby as the product (not a second competing logo).
-- Footer: lockup + © Santan. No ™ or ® on Pima (L9).
+- Footer: lockup + © santan.ai. No ™ or ® on Pima (L9).
 - Do not stretch, outline, recolor, add drop shadows, or put the mark on a competing hue.
 - Do not use the eight Beta testers or any customer mark next to this lockup.
 

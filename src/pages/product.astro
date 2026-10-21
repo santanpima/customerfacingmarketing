@@ -5,6 +5,7 @@ import CuiNotice from "../components/CuiNotice.astro";
 import ModuleList from "../components/ModuleList.astro";
 import PlanFigure from "../components/PlanFigure.astro";
 import {
+  includedLead,
   includedWithLightScheduler,
   lightScheduler,
   notLightScheduler,
@@ -16,51 +17,47 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title={seo.product.title} description={seo.product.description}>
-  <h1>{lightScheduler.name}</h1>
-  <p>{lightScheduler.summary}</p>
-  <CuiNotice />
-
-  <section>
-    <h2>An unclassified plan</h2>
-    <p>{unclassifiedPlanLead}</p>
-    <PlanFigure />
-    <CapabilityList ordered />
-    <p>{notLightScheduler}</p>
+  <section class="band band-dark">
+    <div class="inner">
+      <h1>{lightScheduler.name}</h1>
+      <p class="lede">{lightScheduler.summary}</p>
+    </div>
   </section>
 
-  <section id="included">
-    <h2>Included with Light Scheduler</h2>
-    <p>These are included with Light Scheduler. They are not sold separately.</p>
-    <ul class="module-list">
-      {
-        includedWithLightScheduler.map((item) => (
-          <li>
-            <h3>{item.name}</h3>
-            <p>{item.summary}</p>
-          </li>
-        ))
-      }
-    </ul>
-  </section>
+  <div class="band">
+    <div class="inner stack">
+      <CuiNotice />
 
-  <ModuleList />
+      <section>
+        <h2>An unclassified plan</h2>
+        <p>{unclassifiedPlanLead}</p>
+        <PlanFigure />
+        <CapabilityList ordered />
+        <p>{notLightScheduler}</p>
+      </section>
 
-  <section>
-    <h2>Not on the quote</h2>
-    <p>{notSeparateLineItems}</p>
-  </section>
+      <section id="included">
+        <h2>Included with Light Scheduler</h2>
+        <p>{includedLead}</p>
+        <ul class="module-list">
+          {
+            includedWithLightScheduler.map((item) => (
+              <li>
+                <h3>{item.name}</h3>
+                <p>{item.summary}</p>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
 
-  <section>
-    <h2>AI metering</h2>
-    <p>
-      Credits are planned and not built. Beta uses the customer’s own key. Quantities
-      are unset.
-    </p>
-    <p>
-      A hard stop can only stop the Assistant, never the schedule. The product works
-      with AI off.
-    </p>
-  </section>
+      <ModuleList />
 
-  <CtaRow />
+      <section>
+        <h2>Not on the quote</h2>
+        <p>{notSeparateLineItems}</p>
+        <CtaRow />
+      </section>
+    </div>
+  </div>
 </BaseLayout>

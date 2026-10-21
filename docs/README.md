@@ -8,8 +8,8 @@ Documents for the Pima marketing site. The first Astro version is in `src/`. The
 | [content.md](content.md) | Voice, claims matrix, positioning drafts, page copy, SEO. |
 | [information-architecture.md](information-architecture.md) | Routes, nav, CTAs, form, what a stranger must see. |
 | [implementation-plan.md](implementation-plan.md) | Stack, layout, phases, test and launch checklists. |
-| [open-questions.md](open-questions.md) | What Santan still has to decide. |
-| [../brand/README.md](../brand/README.md) | Temporary Santan marks and color tokens. |
+| [open-questions.md](open-questions.md) | What santan.ai still has to decide. |
+| [../brand/README.md](../brand/README.md) | Temporary santan.ai marks and color tokens. |
 
 Precedence: register 33 over older product documents; [requirements.md](requirements.md) over page copy; do not revive tiers, prices, or FedRAMP-ready language from documents 01, 08, or 53 §3.
 

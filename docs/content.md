@@ -6,7 +6,7 @@ Voice, allowed claims, forbidden language, positioning drafts, and page copy for
 
 - Direct, specific, and calm. Defense-adjacent commercial software, not consumer SaaS
 - Short sentences. Named things (Light Scheduler, named seats, CUI) rather than mood words (“powerful”, “seamless”, “next-gen”)
-- First person plural is Santan (“we will send a quote”). The product is Pima
+- First person plural is santan.ai (“we will send a quote”). The product is Pima
 - Do not hype unbuilt modules. Later is later
 - Do not sound like a signed contract. Legal pages are counsel’s
 - Do not sound like the signed-in application. No Ask bar, no “projects” chrome
@@ -16,9 +16,10 @@ Voice, allowed claims, forbidden language, positioning drafts, and page copy for
 | Use | Do not use |
 | --- | --- |
 | Pima | PIMA, Pima™, Pima® |
-| Santan | Santana, Santan AI as the product name |
+| santan.ai | Santan, Santana, Santan AI as the product name |
 | Light Scheduler | “our scheduling suite” as if Master Scheduler were shipping |
 | named seats | “users”, “licenses” as the unit of sale (seat is the unit) |
+| Security (included with Light Scheduler) | “Security so far” as a customer-facing label |
 | request a demo / request a quote | start free, sign up, buy now, get started (as a primary CTA) |
 | commercial Pima / this service | government cloud, authorized Pima |
 
@@ -26,7 +27,7 @@ Voice, allowed claims, forbidden language, positioning drafts, and page copy for
 
 ### Allowed now
 
-- Pima is a project-controls platform from Santan
+- Pima is a project-controls platform from santan.ai
 - The first release for sale is Light Scheduler
 - Light Scheduler: grid and outline, dates, durations, Gantt, dependencies, constraints, forward pass
 - With Light Scheduler the customer also gets Project Registry, Calendars, Admin Panels, current Security, Import / Export / Reporting (including print and the Graphic), and the Assistant
@@ -34,12 +35,12 @@ Voice, allowed claims, forbidden language, positioning drafts, and page copy for
 - Enterprise Modules are not sold; they arrive because a Project Module needs them. Security is provided at no charge
 - Functions are not sold. They appear where a seated person needs them
 - Later modules are named as later releases, not as available products
-- Price is by quote from Santan. Small accounts: card intended. Larger: invoice and PO, net-30. Santan does not hold card numbers. No provider chosen — so **no pay flow**
-- Accounts for first customers are created by Santan. This site does not offer Sign in while the product has no live URL (Q1)
+- Price is by quote from santan.ai. Small accounts: card intended. Larger: invoice and PO, net-30. santan.ai does not hold card numbers. No provider chosen — so **no pay flow**
+- Accounts for first customers are created by santan.ai. This site does not offer Sign in while the product has no live URL (Q1)
 - Assistant proposes; the person keeps or discards; fully usable with AI off; AI calls are recorded
 - Files attached to a prompt are sent to the model vendor as text and not kept. Do not attach CUI
 - AI is the only metered capability; a hard stop can only stop the Assistant, never the schedule
-- Customer data is kept apart by the database; row-level security is forced; no cross-customer read path, including for Santan’s AI
+- Customer data is kept apart by the database; row-level security is forced; no cross-customer read path, including for santan.ai's AI
 - Organization is never in the sign-in token; no long-lived service-account keys; credentials in a secret store; audit logs 400 days
 - Product build installs no packages from the internet
 - Sign-in is Google Identity Platform (authorization sentence only with a dated re-check — see Q7)
@@ -55,7 +56,7 @@ Voice, allowed claims, forbidden language, positioning drafts, and page copy for
 | Account shapes 1–4 | No infrastructure prices. Shape 3–4 only if asked / if a contract demands it |
 | Shapes 5–6 | Not the first release. Shape 5 is not authorized and not for sale |
 | AI credits | Both payment ways stand; quantities and price unset; credits not built; Beta uses the customer’s key |
-| How Santan intends to take payment | Intent only. No checkout exists |
+| How santan.ai intends to take payment | Intent only. No checkout exists |
 | “Capable” FedRAMP shape | Capable, **not authorized**. Not this service |
 
 ### Forbidden
@@ -75,23 +76,23 @@ Voice, allowed claims, forbidden language, positioning drafts, and page copy for
 - “Trademark pending” or ® on Pima
 - A second Terms, Privacy, or MSA authored in this repo
 - Transferring Google’s Identity Platform authorization onto Pima
-- Santan’s internal infrastructure costs as customer prices
-- Credit prices, token allowances, or a model vendor named as Santan’s
-- Chatbot or CRM marketing widgets unless Santan asks
+- santan.ai's internal infrastructure costs as customer prices
+- Credit prices, token allowances, or a model vendor named as santan.ai's
+- Chatbot or CRM marketing widgets unless santan.ai asks
 
 ## Positioning
 
-Document 27 still needs a final one sentence. **Q6 (16 October 2026):** use **Option A** as the homepage headline so the site can be built. Options B–F stay documented. Option A is a **placeholder**, not a decided campaign slogan. Expect it to change. Do not delete B–F. Do not present A as “the brand line.”
+Document 27 still needs a final one sentence. **Q6 (16 October 2026):** Option A was the build placeholder. **Q6 (21 October 2026):** the homepage uses **Option B**, split, so the title is a buyer sentence and Light Scheduler sits in the lede. Options A and C–F stay documented. This is the current headline, not a decided campaign slogan. Do not delete A or C–F. Do not present B as “the brand line.”
 
-### Option A — conservative factual (**current placeholder headline**)
+### Option A — conservative factual
 
-> Pima is Santan’s project-controls platform. The first thing for sale is Light Scheduler: plan unclassified work by named seat. This service is not for CUI and is not FedRAMP authorized.
+> Pima is santan.ai's project-controls platform. The first thing for sale is Light Scheduler: plan unclassified work by named seat. This service is not for CUI and is not FedRAMP authorized.
 
 **Why:** Three facts the Gate 1 site must teach. No slogan. CUI is in the first screen, not a footnote.
 
 **Risk:** Long for a hero. Split across headline + lede if needed.
 
-### Option B — buyer conversation, no bake-off
+### Option B — buyer conversation, no bake-off (**current homepage headline**)
 
 > Pima is for the unclassified schedule: internal projects, commercial work, and proposals before award.
 
@@ -131,19 +132,19 @@ Document 27 still needs a final one sentence. **Q6 (16 October 2026):** use **Op
 
 **Risk:** “The tools you already buy” invites a bake-off. Keep competitors off the homepage headline.
 
-**Current build:** Option A is split across the homepage title and lede. The title is “Light Scheduler is Pima’s first module.” The lede carries the platform, the named seat, unclassified work, and the short CUI line. Still a placeholder, not a decided slogan. To change later, replace those two strings. Do not pick D as the only sentence. Do not pick F without stripping competitor echo if it reads as C7.
+**Current build:** Option B is split across the homepage title and lede. The title is “Pima is for the unclassified schedule.” The lede carries the platform, that Light Scheduler is the first module for sale, and named seats. The four uses are expanded in “Who it is for,” not restated in the headline. Still not a decided slogan. To change later, replace those two strings. Do not pick D as the only sentence. Do not pick F without stripping competitor echo if it reads as C7.
+
+**Frame Light Scheduler as a fit.** The missing Master Scheduler features (baseline, float, critical path, EVMS foundation) are the formal apparatus this module is without. Say that as scope. Do not lead with “first module” or “not on the first release” as if the product were a stub.
 
 ## Shared copy
 
 ### CUI notice (canonical)
 
-Use this text, or a strict shortening that keeps every clause, on **home, product, security,** and **contact confirmation**. Not in the footer only.
+Use this text, or a strict shortening that keeps every clause, on **product, security,** and **contact confirmation**. Do not put it in the header, footer, or homepage hero.
 
 > Commercial Pima is not FedRAMP authorized and is not FedRAMP Moderate equivalent. It is not for Controlled Unclassified Information (CUI) or covered defense information. A defense contractor who puts CUI into this service can break their own contract. A path for CUI would be a later, separate deployment. That deployment is not for sale now.
 
-**Short banner** (always accompanied by a link to `/security` for the full statement). It is part of the chrome and is not dismissible.
-
-> This service is not for CUI and is not FedRAMP authorized.
+Do not use the short line “This service is not for CUI and is not FedRAMP authorized.” Not as a banner, not in the footer, not in the homepage lede.
 
 ### Primary CTAs
 
@@ -167,13 +168,12 @@ Do not use: Get started, Start free, Try Pima, Create account, Buy, See pricing 
 
 ### Footer
 
-- Santan lockup from [`brand/`](../brand/README.md) (navy on light, white on Dark Blue)
+- santan.ai lockup from [`brand/`](../brand/README.md) (navy on light, white on Dark Blue)
 - Product name **Pima** typeset nearby; there is no Pima logo yet
-- Repeat short CUI banner + link to `/security`
 - Nav repeated
 - Terms / Privacy: only when Q8 / Q9 exist
 - Optional printed email: only when Q3 exists
-- Copyright: © Santan. No trademark claim on Pima
+- Copyright: © santan.ai. No trademark claim on Pima
 
 ## Page copy
 
@@ -181,26 +181,33 @@ Headlines below are drafts. Body is the substance that must appear.
 
 ### Home `/`
 
-**Purpose.** What Pima is, what is for sale now, CUI, how to ask Santan.
+**Purpose.** What Pima is for, what is for sale now, CUI, how to ask santan.ai.
 
 **Hero**
 
-- Headline: **Light Scheduler is Pima’s first module.** Option A split into one sentence (placeholder; Q6). Not a decided slogan.
-- Lede: Pima is Santan’s project-controls platform. You buy named seats and plan unclassified work. This service is not for CUI and is not FedRAMP authorized.
-- CTAs: Request a demo is the filled button. Request a quote is a text link. No Sign in (Q1). Repeat the demo button at the end of the page, then one line: Santan will reply. This site does not create an account. No response time.
-- Three routes under the hero, in this order: what ships (`/product`), how a quote works (`/buying`), what this service is not (`/security`).
+- Headline: **Pima is for the unclassified schedule.** Option B split into one sentence (Q6, 21 October 2026). Not a decided slogan.
+- Lede: Pima is santan.ai's project-controls platform. Light Scheduler is the first module for sale. You buy named seats; santan.ai quotes.
+- CTAs: Request a demo is the filled button. Request a quote is a text link. No Sign in (Q1). Repeat the demo button at the end of the page, then one line: santan.ai will reply. This site does not create an account. No response time.
+- Three routes under the hero, in this order: what ships (`/product`), how a quote works (`/buying`), security (`/security`). Do not label the security tile “What this service is not.”
 
-**CUI.** Short banner, not dismissible, plus the short line in the lede. Link to `/security`.
+**CUI.** No short banner and no short line in the lede. The Security tile and `/security` carry the boundary. Full canonical text is on `/product`, `/security`, and `/contact/thanks`.
+
+**Who.** Directly after the three routes. Lead: defense contractors and commercial teams, on an ordinary cloud service. Then four uses, each with one sentence, in this order:
+
+- Unclassified planning — the schedule you can keep on an ordinary cloud
+- Internal projects — work that is not a contract IMS
+- Commercial work — not CUI, and not covered defense information
+- Proposals before award — a plan for a bid, before there is a program to baseline
+
+The next paragraph stays the audience cue, not a bake-off: first conversations are often with people who already buy Primavera, Microsoft Project, or Deltek. This is for the unclassified work they also run.
 
 **What Light Scheduler is.** One clause that this is planning without the formal apparatus, then the Light Scheduler still, then a scan list of five names only: grid and outline, dates and durations, dependencies and constraints, the Gantt, and the forward pass. Do not repeat a sentence under each name on the home page. Those sentences stay on `/product`.
 
-**The Assistant.** Directly after that list. It proposes. You keep or discard. Usable with AI off. Do not attach CUI to a prompt.
+**The Assistant.** After the Light Scheduler scan list, not as a peer of the hero. It proposes. You keep or discard. Usable with AI off. Do not attach CUI to a prompt.
 
-**Who.** Lead: defense contractors and commercial teams, on an ordinary cloud service. Then four lines, in this order: unclassified planning, internal projects, commercial work, proposals before award. The next paragraph stays: first conversations are often with people who already buy Primavera, Microsoft Project, or Deltek.
+**What a seat includes.** One benefit sentence: a Light Scheduler seat is a working account — Project Registry, Calendars, Admin Panels, Security, Import / Export / Reporting, and the Assistant. None of these is a separate line item. Link to `/product`. Later modules are one sentence and a link to the product page, not the eight-name list. Customer-facing label is **Security**, not “Security so far.”
 
-**What a seat includes.** One sentence: Project Registry, Calendars, Admin Panels, Security so far, Import / Export / Reporting, and the Assistant. None of these is a separate line item. Link to `/product`. Later modules are one sentence and a link to the product page, not the eight-name list.
-
-**Buying, one paragraph.** Santan quotes named seats in Light Scheduler. No published price list, no tiers, no self-serve signup. There is no self-serve trial. Ask for a demo.
+**Buying, one paragraph.** santan.ai quotes named seats in Light Scheduler. No published price list, no tiers, no self-serve signup. There is no self-serve trial. Ask for a demo. Write it as how this buyer already buys, not as a list of things the site lacks.
 
 Do not: logo row, testimonial, pricing table, “trusted by”, competitor matrix.
 
@@ -210,26 +217,34 @@ Do not: logo row, testimonial, pricing table, “trusted by”, competitor matri
 
 **CUI.** Canonical notice.
 
-**Light Scheduler.** Repeat the definition. Be concrete: grid, outline, dates, durations, Gantt, dependencies, constraints, forward pass.
+**Light Scheduler.** Repeat the definition. Be concrete: grid, outline, dates, durations, Gantt, dependencies, constraints, forward pass. Frame it as planning without the formal apparatus, not as an incomplete Master Scheduler.
 
-**An unclassified plan.** The Light Scheduler still, then the same capabilities as an ordered walkthrough of one plan with no CUI in it. Each step keeps its sentence. State that baseline, float, the critical path, and an EVMS-compliant foundation are Master Scheduler and are not on the first release. Do not describe those features as if they were Light Scheduler.
+**An unclassified plan.** The Light Scheduler still, then the same capabilities as an ordered walkthrough of one plan with no CUI in it. Each step keeps a sentence that states the job, not only the name:
+
+- Grid and outline: put the work in a grid and an outline you can indent and scan
+- Dates and durations: each line has when it sits, and how long it runs
+- Dependencies and constraints: logic between lines, and limits on when work can sit
+- Gantt: the same plan in time
+- Forward pass: dates calculate from those durations, dependencies, and constraints
+
+Then state that baseline, float, the critical path, and an EVMS-compliant foundation belong to Master Scheduler — the formal apparatus, when the work needs it — and that module is not on the first release. Do not describe those features as if they were Light Scheduler. Do not apologize for their absence.
 
 ### Light Scheduler still
 
 One image, used on the home scan list and at the start of “An unclassified plan.” File: `public/light-scheduler-placeholder.svg`. It is a labeled placeholder, not a product screenshot.
 
-Replace that file with a still Santan supplies. The still shows one unclassified plan in Light Scheduler: the grid and its outline, dates, durations, the Gantt, dependencies, and constraints. It does not show baseline, float, the critical path, or an EVMS-compliant foundation. Those are Master Scheduler and are not on the first release. Do not put CUI in the sample plan. Do not draw a fake schedule and present it as the product. Until the still exists, keep the placeholder and its caption.
+Replace that file with a still santan.ai supplies. The still shows one unclassified plan in Light Scheduler: the grid and its outline, dates, durations, the Gantt, dependencies, and constraints. It does not show baseline, float, the critical path, or an EVMS-compliant foundation. Those are Master Scheduler and are not on the first release. Do not put CUI in the sample plan. Do not draw a fake schedule and present it as the product. Until the still exists, keep the placeholder. Caption what the picture is (one unclassified plan, those elements). Do not use the caption to disclaim Master Scheduler; that sentence stays after the walkthrough.
 
 **Included with it** (not sold separately):
 
 - Project Registry: projects, people, access, change log, currency. A person with no Project Module seat cannot see the register
 - Calendars: working time. Pima does not fetch holidays from the web
-- Admin Panels: the customer’s administrator invites people, assigns seats, suspends and removes. First accounts may be created by Santan
-- Security so far: email/password, two-factor authentication, roles. Sign-in happens in the product, not on this site
-- Import, Export, Reporting: including printing and the Graphic
+- Admin Panels: the customer’s administrator invites people, assigns seats, suspends and removes. First accounts may be created by santan.ai
+- Security: email/password, two-factor authentication, roles. Sign-in happens in the product, not on this site. (Register phrase is “Security so far”; do not use that label on the site.)
+- Import, Export, Reporting: including printing and the Gantt graphic
 - Assistant: proposes only; keep or discard; recorded; works off; attachments become text at the model vendor and are not kept; no CUI
 
-**Later modules.** A table or list using the definitions in requirements.md. Column or label: **Not on the first release.** One line: later modules follow in later releases.
+**Later modules.** A table or list using the definitions in requirements.md, shortened for public copy. Column or label: **Not on the first release.** One line: later modules follow in later releases. Do not print “nothing else about it is decided” on Change Management. Do not print that Proposal Pricer is meant to compete with Deltek ProPricer (C7; document 48 is not launch copy). End the page on what a seat includes / not on the quote and the demo CTA. AI metering belongs on `/buying`, not as the last section here.
 
 **Not on the quote.** Do not list Project Registry, Calendars, Admin Panels, Security, Import / Export / Reporting, or the Assistant again as unsold; the included section already names them. One note for the names that are not in that set: Resources, Rates, Burdens, Organizations, Assignment, Rollup, and the Pricing Engine. They are not line items and not sold. They appear because a seated module or a seated person needs them. Do not put them in a buy grid.
 
@@ -241,7 +256,7 @@ This page **is** the Gate 1 “pricing” page. It explains the model. It has no
 
 **Title:** How buying works
 
-**Open.** Santan quotes named seats in Light Scheduler. This page has no prices. There are no tiers. First accounts are created by hand. Request a quote and a demo at equal weight, under the title and again at the end of the page.
+**Open.** Named seats in Light Scheduler. santan.ai quotes. There are no tiers and no public price list. First accounts are created by santan.ai. Write the purchase shape as a match for how this buyer already buys, not as “this page has no prices.” Request a quote and a demo at equal weight, under the title and again at the end of the page.
 
 **What you buy.** Project Modules, by the named seat. Quantity of seats in a module; administrator assigns each seat to one person; seat is the licence to reach that module, reading included; losing the seat removes the module, reading included.
 
@@ -253,16 +268,16 @@ This page **is** the Gate 1 “pricing” page. It explains the model. It has no
 
 **What is for sale now.** Light Scheduler seats. Later modules later.
 
-**How Santan intends to charge** (intent, not a checkout): card for small accounts; invoice and purchase order, net-30, for larger ones. Santan does not hold card numbers. No payment provider is on this site because none is chosen and nothing can be bought here.
+**How santan.ai intends to charge** (intent, not a checkout): card for small accounts; invoice and purchase order, net-30, for larger ones. santan.ai does not hold card numbers. There is no checkout on this site. Do not add that a provider is unchosen.
 
-**Account shape.** Chosen at sale, separately from modules. v1 may say:
+**Account shape.** Chosen at sale, separately from modules. Lead with the shapes a buyer can use now. v1 may say:
 
-- Shared tenancy with row-level security (the Beta is joint tenancy, multiple logins, one Santan account)
+- Shared tenancy with row-level security
 - Dedicated database if a customer needs it
 - A FedRAMP deployment inside an Assured Workloads boundary is designed, **not authorized, not this service, not for sale now**
 - Customer-operated on the customer’s infrastructure is not the first release
 
-No dollar figures.
+Do not print that the Beta is joint tenancy, multiple logins, one santan.ai account. No dollar figures.
 
 **Trial.** There is no self-serve trial. Ask for a demo. Do not print that a trial is undecided; that is Q17, not public copy.
 
@@ -274,17 +289,19 @@ No dollar figures.
 
 **Purpose.** Document 54 S1 overview plus the mandatory CUI line. Not a questionnaire pack.
 
-**Lead with CUI.** Canonical notice, full text, not a banner-only treatment. The next sentence is the designed FedRAMP shape: designed, and not this service. Do not open the page with a second restatement of the notice.
+**Hero.** How this commercial service keeps customer data apart. Do not open the dark band with another CUI restatement or with the FedRAMP-shape negative.
 
-**Then the controls, in this order.** How customer data is kept apart. Credentials and the 400-day audit. Sign-in. The Assistant. Product build. The “not yet” list (no SOC 2, no penetration-test letter, no VPAT) comes after those controls.
+**Lead with CUI in the body.** Canonical notice, full text, not a banner-only treatment. The next sentence is the designed FedRAMP shape: designed, and not this service.
 
-**How customer data is kept apart.** Database isolation; forced row-level security; no cross-customer read path, including Santan’s AI.
+**Then the controls, in this order.** How customer data is kept apart — these isolation facts are the argument for using commercial Pima on unclassified work. Credentials and the 400-day audit. Sign-in. The Assistant. Product build. The “not yet” list (no SOC 2, no penetration-test letter, no VPAT) comes after those controls.
+
+**How customer data is kept apart.** Database isolation; forced row-level security; no cross-customer read path, including santan.ai's AI.
 
 **Credentials and audit.** Organization not in the sign-in token; no long-lived service-account keys; credentials in a secret store; audit logs kept 400 days.
 
-**Build.** Product build installs no packages from the internet. (This is a product fact; do not imply the marketing site follows the same rule.)
+**Build.** Product build installs no packages from the internet. Do not add a sentence that this does not describe the marketing site.
 
-**Sign-in.** Open with how people get in: email and password, two-factor authentication, and roles, in the product. Then Google Identity Platform. Dated FedRAMP High sentence only after Q7. Explicit: that authorization is Google’s, not Pima’s. This marketing site has no sign-in because the product has no live URL.
+**Sign-in.** Open with how people get in: email and password, two-factor authentication, and roles, in the product. Then Google Identity Platform. Dated FedRAMP High sentence only after Q7. Explicit: that is Google’s service; it does not authorize Pima. Do not explain that the marketing site has no sign-in because the product has no live URL.
 
 **Assistant.** Proposes; person decides; every AI call recorded; works with AI off; attachments to the vendor as text, not kept; no CUI in prompts.
 
@@ -296,11 +313,11 @@ No dollar figures.
 
 **Purpose.** Demo or quote request. The only conversion.
 
-**Intro.** Tell Santan whether you want a demo, a quote, or both. There is no public signup and no checkout. The product is in Beta and has no public sign-in URL on this site.
+**Intro.** Tell santan.ai whether you want a demo, a quote, or both. Do not stack “no public signup, no checkout, no sign-in URL, Beta” on this page. Those facts live on Buying and `/security`.
 
-**While Q2 is unanswered.** The page states that the request form is not open yet. It does not show a disabled copy of the form.
+**While Q2 is unanswered.** The page states that the request form is not open yet. It does not show a disabled copy of the form. Do not invent an inbox.
 
-**CUI.** Short banner on the form page; **full canonical notice on the confirmation page** (required).
+**CUI.** No short banner on the form page. **Full canonical notice on the confirmation page** (required).
 
 **Form fields** when the form is open (keep short). Order: intent, name, organization, work email, CUI acknowledgement, then the optional fields, then submit.
 
@@ -329,11 +346,11 @@ No dollar figures.
 
 Required CUI restatement (canonical).
 
-> Thank you. Santan has the request. If you asked for a demo or a quote, Santan will reply. This site cannot create an account or take payment.
+> Thank you. santan.ai has the request. If you asked for a demo or a quote, santan.ai will reply. This site cannot create an account or take payment.
 
 > [Canonical CUI notice]
 
-Do not name a person (Q5). If Q3 has an email, print it as a fallback. No “your trial is ready.” No calendar embed unless Santan later asks.
+Do not name a person (Q5). If Q3 has an email, print it as a fallback. No “your trial is ready.” No calendar embed unless santan.ai later asks.
 
 After the canonical notice, link to `/product` and `/security` so a colleague can read what was requested and what the boundary is. Do not promise a response time.
 
@@ -343,22 +360,22 @@ Titles ≤ ~60 characters where possible. Every public page includes CUI in the 
 
 | Page | Title | Meta description |
 | --- | --- | --- |
-| Home | Pima by Santan — project controls, Light Scheduler first | Pima is Santan’s project-controls platform. First release: Light Scheduler. Price and demo by request. Not for CUI. Not FedRAMP authorized. |
+| Home | Pima by santan.ai — the unclassified schedule | Pima is for unclassified planning, internal projects, commercial work, and proposals before award. First release: Light Scheduler. Price and demo by request. Not for CUI. Not FedRAMP authorized. |
 | Product | Light Scheduler — Pima | Plan unclassified work: grid, dates, Gantt, dependencies. Later modules are later. Not for CUI. |
-| Buying | How buying works — Pima | Named seats in Project Modules. No public price list. Santan quotes. No self-serve checkout. |
+| Buying | How buying works — Pima | Named seats in Project Modules. No public price list. santan.ai quotes. No self-serve checkout. |
 | Security | Security — Pima | Commercial Pima is not FedRAMP authorized and not for CUI. How data is kept apart, sign-in, and the Assistant. |
-| Contact | Request a demo or quote — Pima | Ask Santan for a demo or a quote. No public signup. This service is not for CUI. |
+| Contact | Request a demo or quote — Pima | Ask santan.ai for a demo or a quote. No public signup. This service is not for CUI. |
 | Thanks | Request received — Pima | `noindex` recommended |
 
 ## Tone examples
 
 **Use**
 
-> Light Scheduler is the first Project Module for sale. You buy named seats. Santan sends a quote.
+> Pima is for the unclassified schedule. Light Scheduler is the first module for sale. You buy named seats. santan.ai sends a quote.
 
 > The Assistant proposes a change. The person keeps it or discards it. Pima is usable with AI switched off.
 
-> This service is not for CUI and is not FedRAMP authorized.
+> Commercial Pima is not FedRAMP authorized and is not for CUI. The full canonical notice belongs on product, security, and thanks.
 
 **Do not use**
 

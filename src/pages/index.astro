@@ -22,11 +22,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title={seo.home.title} description={seo.home.description}>
-  <h1>{homepageHeadline}</h1>
-  <p>{homeLede}</p>
-  <CtaRow />
-  <nav aria-label="On this site">
-    <ul class="intent-list">
+  <section class="band band-dark">
+    <div class="inner">
+      <h1>{homepageHeadline}</h1>
+      <p class="lede">{homeLede}</p>
+      <CtaRow />
+    </div>
+  </section>
+
+  <nav class="intent-tiles" aria-label="On this site">
+    <ul>
       {
         intentRoutes.map((route) => (
           <li>
@@ -40,84 +45,127 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </ul>
   </nav>
 
-  <section>
-    <h2>What Light Scheduler is</h2>
-    <p>{lightSchedulerIntro}</p>
-    <PlanFigure />
-    <CapabilityList namesOnly />
-  </section>
+  <div class="band">
+    <div class="inner stack">
+      <section>
+        <h2>Who it is for</h2>
+        <p>{whoLead}</p>
+        <ul class="who-grid">
+          {
+            whoUses.map((use) => (
+              <li>
+                <h3>{use.name}</h3>
+                <p>{use.detail}</p>
+              </li>
+            ))
+          }
+        </ul>
+        <p>{audienceCue}</p>
+      </section>
 
-  <section>
-    <h2>The Assistant</h2>
-    <p>{assistantSummary}</p>
-  </section>
+      <section>
+        <h2>What Light Scheduler is</h2>
+        <p>{lightSchedulerIntro}</p>
+        <PlanFigure />
+        <CapabilityList namesOnly />
+      </section>
 
-  <section>
-    <h2>Who it is for</h2>
-    <p>{whoLead}</p>
-    <ul class="scan-list">
-      {whoUses.map((use) => <li>{use}</li>)}
-    </ul>
-    <p>{audienceCue}</p>
-  </section>
+      <section>
+        <h2>The Assistant</h2>
+        <p>{assistantSummary}</p>
+      </section>
 
-  <section>
-    <h2>What a seat includes</h2>
-    <p>
-      {seatIncludes}
-      <a href="/product#included">See the product page.</a>
-    </p>
-    <p>
-      {laterModulesFollow}
-      <a href="/product#later-modules-heading">They are named on the product page.</a>
-    </p>
-  </section>
+      <section>
+        <h2>What a seat includes</h2>
+        <p>
+          {seatIncludes}
+          <a href="/product#included">See the product page.</a>
+        </p>
+        <p>
+          {laterModulesFollow}
+          <a href="/product#later-modules-heading">They are named on the product page.</a>
+        </p>
+      </section>
 
-  <section>
-    <h2>Buying</h2>
-    <p>
-      {homeBuying}{" "}
-      {trialNote}
-    </p>
-    <p><a href="/buying">How buying works</a></p>
-  </section>
-
-  <CtaRow quote={false} />
-  <p>{homeClose}</p>
+      <section>
+        <h2>Buying</h2>
+        <p>
+          {homeBuying}{" "}
+          {trialNote}
+        </p>
+        <p><a href="/buying">How buying works</a></p>
+        <CtaRow quote={false} />
+        <p>{homeClose}</p>
+      </section>
+    </div>
+  </div>
 </BaseLayout>
 
 <style>
-  .intent-list {
-    max-width: var(--measure);
-    margin: var(--space-lg) 0 0;
+  .intent-tiles ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    margin: 0;
     padding: 0;
     list-style: none;
-    display: grid;
-    gap: 0.85rem;
+    background: var(--color-dark-blue);
+    border-bottom: 1px solid var(--color-dark-blue);
   }
 
-  .intent-list a {
+  .intent-tiles a {
     display: grid;
-    gap: 0.15rem;
+    gap: 0.35rem;
+    height: 100%;
+    padding: 1.25rem var(--inset);
+    background: var(--color-white);
     color: var(--color-dark-blue);
     font-weight: 600;
     text-decoration: none;
   }
 
-  .intent-list a span {
+  .intent-tiles a span {
     font-weight: 400;
   }
 
-  .intent-list a:hover {
+  .intent-tiles a:hover {
     text-decoration: underline;
     text-underline-offset: 0.15em;
   }
 
-  .scan-list {
-    max-width: var(--measure);
-    margin: 0 0 1rem;
-    padding-left: 1.25rem;
+  .who-grid {
     display: grid;
-    gap: 0.35rem;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    max-width: none;
+    margin: 0 0 1rem;
+    padding: 0;
+    list-style: none;
+    background: var(--color-dark-blue);
+    border: 1px solid var(--color-dark-blue);
+  }
+
+  .who-grid li {
+    padding: 1rem 1.15rem;
+    background: var(--color-white);
+  }
+
+  .who-grid h3 {
+    margin: 0;
+  }
+
+  .who-grid p {
+    margin: 0.35rem 0 0;
+    max-width: none;
+  }
+
+  @media (min-width: 48rem) {
+    .intent-tiles ul {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .who-grid {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 </style>
